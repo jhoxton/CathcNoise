@@ -6,8 +6,25 @@ var bodyParser = require('body-parser');
 var AmazonCognitoIdentity = require('amazon-cognito-identity-js');
 var CognitoUserPool = AmazonCognitoIdentity.CognitoUserPool;
 var CognitoUserAttribute = AmazonCognitoIdentity.CognitoUserAttribute;
+//var Congnito =AWSCognito.CognitoIdentityServiceProvider;
 
-    app.use(bodyParser.urlencoded({ extended: true}));
+var AuthenticationDetails = AmazonCognitoIdentity.AuthenticationDetails;
+
+
+  var poolData = {
+        UserPoolId : 'ap-southeast-2_XVdm31LEy', // Your user pool id here
+        ClientId : '6kgij187eog3fob8rqjufgiock' // Your client id here
+    };
+    var userPool = new CognitoUserPool(poolData);
+
+
+
+
+var CognitoUser = AmazonCognitoIdentity.CognitoUser; 
+//var cognitoUser = AmazonCognitoIdentity.CognitoUser;
+
+app.use(bodyParser.urlencoded({ extended: true}));
+
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname + '/public')));
 //AmazonCognitoIdentity.config.region = "ap-southeats-2";
@@ -21,6 +38,13 @@ app.get('/', function(req, res) { //on html request of root directory, run callb
 
 app.post('/login', function(req, res){
     res.sendFile(path.join(__dirname, 'welcome.html'));
+
+     var aUsername = req.body.username;
+    var aPassword = req.body.password;
+
+    console.log("User Name: " + aUsername + " Password: "+ aPassword);
+
+    Login(aUsername, aPassword);
 });
 app.get('/register', function(req, res){
 	res.sendFile(path.join(__dirname, 'register.html'));
@@ -28,7 +52,7 @@ app.get('/register', function(req, res){
 });
 
 app.post('/signup', function(req, res){
-    res.sendFile(path.join(__dirname, 'login.html'));
+    res.sendFile(path.join(__dirname, 'confirm.html'));
     var aName = req.body.name;
     var aFamilyName = req.body.familyName
     var aEmail = req.body.email;
@@ -41,13 +65,18 @@ app.post('/signup', function(req, res){
     register(aName, aFamilyName, aEmail, aAddress, aPhone, aUserName, aPassword);
 });
 
+app.post('/confirm', function(req, res){
+    res.sendFile(path.join(__dirname, 'login.html'));
+
+    var aVerify = req.body.verify;
+    console.log("Verify code" + aVerify);
+    ConfirmUser(aVerify);
+});
+
+
 function register(name, familyName, email, address, phone, username, password)
 {
-     var poolData = {
-        UserPoolId : 'ap-southeast-2_XVdm31LEy', // Your user pool id here
-        ClientId : '6kgij187eog3fob8rqjufgiock' // Your client id here
-    };
-    var userPool = new CognitoUserPool(poolData);
+   
 
     var attributeList = [];
 
@@ -90,10 +119,51 @@ function register(name, familyName, email, address, phone, username, password)
     userPool.signUp(username, password, attributeList, null, function(err, result){
         if (err) {
            console.log(err);
-            return;
         }
+        else
+        {
         cognitoUser = result.user;
         console.log('user name is ' + cognitoUser.getUsername());
+       }
+    });
+}
+
+function ConfirmUser(code){
+     cognitoUser.confirmRegistration(code, true, function(err, result) {
+    if (err) 
+    {
+       console.log(err);
+        return;
+    }
+    console.log('call result: ' + result);
+});
+}
+
+function Login(userName, password){
+    var authenticationData = {
+        Username : userName, // your username here
+        Password : password, // your password here
+    };
+
+    var userData = { 
+        Username: userName,
+        Pool: userPool
+        };
+    var authenticationDetails = new AuthenticationDetails(authenticationData);
+ 
+    var cognitoUser = new CognitoUser(userData);
+    cognitoUser.authenticateUser(authenticationDetails, {
+        onSuccess: function (result) {
+            console.log('access token + ' + result.getAccessToken().getJwtToken());
+        },
+ 
+        onFailure: function(err) {
+            console.log(err);
+        },
+        mfaRequired: function(codeDeliveryDetails) {
+            var verificationCode = prompt('Please input verification code' ,'');
+            cognitoUser.sendMFACode(verificationCode, this);
+        }
     });
 }
 app.listen(port);//listen for network traffic on port specified by port variable
