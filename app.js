@@ -12,9 +12,9 @@ var CognitoUser = AmazonCognitoIdentity.CognitoUser;
     //user pool data
     var poolData = {
         // Your user pool id here
-        UserPoolId : 'ap-southeast-2_XVdm31LEy', 
+        UserPoolId : 'ap-southeast-2_VvUYI3VWo', 
         // Your client id here
-        ClientId : '6kgij187eog3fob8rqjufgiock' 
+        ClientId : '7si2ih6j701c244dn12imvnjs1' 
     };
 
 
@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true}));
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname + '/public')));
-
+app.use(express.static(path.join(__dirname + '/images')));
 var port = 3700 //stores port number to listen on
 
 app.use(express.static(path.join(__dirname + '/css'))); //allows html file to reference stylesheet "helloworld.css" that is stored in ./css directory
