@@ -1,0 +1,221 @@
+  <!doctype html>
+  <html>
+  <head>
+  <link rel="icon" type="image/ico" href="aws_catchnoise_logo.ico" />
+  <meta charset="utf-8">
+  
+  <title >CatchNoise</title>
+  <link rel="stylesheet" type="text/css" href="catchnoise.css">
+  <script src="catchnoise.js"></script>
+  </head>
+  
+  <body >
+  <div class="wrapper"><!-- wrapper -->
+    <div class="header">  <!-- header-->
+     
+      <div class="header-bar">   <!-- header-bar-->
+      
+        <div class="logo-container">  <!--logo-container--> 
+          <a href="#home"> <img src="logo.png" > </a> 
+        </div>   <!--/logo-container-->
+          
+                
+          <div class="icon-container"> 
+           <a href="#user"> <img src="user2.png" class="img-cont"> </a>
+           <a href="#notification"><img src="notif.png" class="img-cont"> </a> 
+           <a href="#settings"><img src="settings2.png" class="img-cont"> </a> 
+           <a href="/logout" ><img src="logout.png" class="img-cont"> </a> 
+           </div>
+          
+           </div> <!-- /header-bar-->
+       
+    </div > <!-- /header-->
+       
+   
+    
+    
+    <div style="clear: both"></div>
+    <div  class="container"> <!-- container-->
+      
+      <div class="sidebar"> <!-- sidebar-->
+        
+        <div class="menu"> <!-- menu-->
+          <ul>
+            <li><a href="#incidents" class="tablinks" onclick="openCity(event, 'Incidents')" id="defaultOpen" >Incidents</a></li>
+            <div class="separator"></div>
+            <li><a href="#audio"  class="tablinks" onclick="openCity(event, 'Audio')">Audio</a></li>
+            <div class="separator"></div>
+            <li><a href="#reports" class="tablinks" onclick="openCity(event, 'Reports')">Reports</a></li>
+            <div class="separator"></div>
+            <li><a href="#feedback" class="tablinks" onclick="openCity(event, 'Feedback')">Feedback</a></li>
+            <div class="separator"></div>
+            <li><a href="#device" class="tablinks" onclick="openCity(event, 'Device')">Device</a></li>
+            <div class="separator"></div>
+            <li><a href="#contact" class="tablinks" onclick="openCity(event, 'Contact')">Contact us</a></li>
+            <div class="separator"></div>
+            <li><a href="#about_us" class="tablinks" onclick="openCity(event, 'About')">About us</a></li>
+          </ul>
+        </div>
+        <!-- /menu--> 
+        
+      </div>
+      <!-- /sidebar--> 
+      
+      <div class="main-container">  <!-- main-container--> 
+      
+    <!-- example-->    
+      <div id="Incidents" class="tabcontent">
+  
+  <!-- incident  -->
+   <!--notification*/-->
+    
+    <div class="notification-wrapper">
+    <div class="notif left">
+      <div class="notif-container">
+      
+        <div class="notif-container-head">
+        <h3>Noise Incident</h3>
+        </div>
+        <div class="notif-container-content">
+        <div class="eventTable">
+       
+      <table border=1>
+          Device ID:<input type="text" name="id" id="id"/><br></br/>
+          db:<input type="text" name="db" id="db"/><br></br/>
+          <!-- Time:<input type="text" name="time" id="time"/><br></br/> -->
+  
+          <button onclick="addEvent();">Add Event Demo</button> 
+  
+          <tr  >
+              <th>Device ID</th>
+              <th>db/Volume</th>
+              <th>Time</th>
+          </tr>
+  
+      </table>
+  
+  </div>
+        </div>
+        <div class="notif-container-foot"></div>
+      </div>
+    </div>
+    <div class="notif left">
+      <div class="notif-container">
+     
+        <div class="notif-container-head">
+        <h3>Noise Incident</h3></div>
+        <div class="notif-container-content">
+        <div class="eventTable">
+       
+      <table border=1>
+          Device ID:<input type="text" name="id" id="id"/><br></br/>
+          db:<input type="text" name="db" id="db"/><br></br/>
+          <!-- Time:<input type="text" name="time" id="time"/><br></br/> -->
+  
+          <button onclick="addEvent();">Add Event Demo</button> 
+  
+          <tr  >
+              <th>Device ID</th>
+              <th>db/Volume</th>
+              <th>Time</th>
+          </tr>
+  
+      </table>
+  
+  </div>
+        </div>
+        <div class="notif-container-foot"></div>
+        
+      </div>
+    </div>
+  </div>
+    
+  <!-- /incident  -->
+</div>
+<div id="Audio" class="tabcontent">
+<h3>Audio</h3>
+  <p>London is the capital city of England.</p>
+</div>
+<div id="Reports" class="tabcontent">
+<h3>Report</h3>
+  <p>London is the capital city of England.</p>
+</div>
+<div id="Feedback" class="tabcontent">
+<h3>Feedback</h3>
+  <p><form id="form" method="get" action="">
+  <table>
+ 
+          <!-- Time:<input type="text" name="time" id="time"/><br></br/> --> 
+ 
+  <tr><td>What is Catchnoise doing well:</td></tr>
+  <Tr><td>  <textarea rows="4" cols="50">
+
+</textarea> </tr>
+          </tr>
+		  
+		          </tr>
+  <tr><td>What can Catchnoise improve on?</td></tr>
+  <tr><td>  <textarea rows="4" cols="50">
+</textarea> </tr>
+  <tr><td>Additonal Comments or suggestions:</td></tr>
+  <tr><td>  <textarea rows="4" cols="50">
+</textarea> </tr>
+      </table>
+	  <input id="subFeedback" type="submit" value="Submit Feedback">
+  </form></p>
+</div>
+<div id="Device" class="tabcontent">
+<h3>Device</h3>
+  <p>London is the capital city of England.</p>
+</div>
+<div id="Contact" class="tabcontent">
+<h3>Contact Us</h3>
+  <p>London is the capital city of England.</p>
+</div>
+<div id="About" class="tabcontent">
+  <h3>About Us</h3>
+  <p id="aboutUs">
+  
+  A new AWS-based open-source project, called CatchNoise, is provided as a
+foundational project allowing governments and their technology partners to build
+portable, rugged and tamperproof devices that can be trained to learn different noise
+types, log evidence in a manner that maintains a legal chain-of-evidence and alert on
+noise in real-time. This will give governments and citizen’s confidence in making
+claims of noise pollution.
+</p><p id="aboutUs">
+With cities becoming more densely populated and the mix of dwelling and construction
+constantly changing it is challenging for governments to address noise complaints raised by
+their citizens. For example, residents in detached housing often complain about new
+apartment blocks and the changes this brings in traffic and even air-conditioning noise.
+Another example is where residents move into an area with a strong pre-existing local
+musical culture that causes them ongoing disturbance.
+
+  </p> 
+  <p id="aboutUs">Catchnoise is a cloud application taht is designed to be used by citizens and authority to help manage noise pollution and to help achieve a peaceful life for eveyone.</p>
+
+       <!-- /example--> 
+       
+      </div>  <!-- /main-container--> 
+      
+    </div>
+    <!-- /container-->
+    
+    <div class="footer"> <!-- footer-->
+      
+      <div class="layout-content-box"> <!-- layout-content-box-->
+        
+        <div class="row"> <!-- row-->
+          <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
+        </div>
+        <!-- /row--> 
+        
+      </div>
+      <!-- /layout-content-box--> 
+      
+    </div>
+    <!-- /footer--> 
+    
+  </div>
+  <!-- /wrapper -->
+  </body>
+  </html>

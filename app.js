@@ -8,6 +8,7 @@ var CognitoUserPool = AmazonCognitoIdentity.CognitoUserPool;
 var CognitoUserAttribute = AmazonCognitoIdentity.CognitoUserAttribute;
 var AuthenticationDetails = AmazonCognitoIdentity.AuthenticationDetails;
 var CognitoUser = AmazonCognitoIdentity.CognitoUser;
+var cognitoUser = null;
 
     //user pool data
     var poolData = {
@@ -31,6 +32,7 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname + '/public')));
 app.use(express.static(path.join(__dirname + '/images')));
+app.use(express.static(path.join(__dirname + '/js')));
 var port = 3700 //stores port number to listen on
 
 app.use(express.static(path.join(__dirname + '/css'))); //allows html file to reference stylesheet "helloworld.css" that is stored in ./css directory
@@ -83,6 +85,10 @@ app.post('/confirm', function(req, res){
     ConfirmUser(aVerify, res);
 });
 
+app.get('/logout', function(req, res){
+	cognitoUser.signOut();
+	res.sendFile(path.join(__dirname, 'login.html'));
+});
 
 function register(name, familyName, email, address, phone, username, password, res)
 {
@@ -173,14 +179,14 @@ function Login(userName, password, res){
     };
     var authenticationDetails = new AuthenticationDetails(authenticationData);
  
-    var cognitoUser = new CognitoUser(userData);
+    cognitoUser = new CognitoUser(userData);
 
     //check user name and password match a user in userpool
     cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: function (result) {
             console.log('access token + ' + result.getAccessToken().getJwtToken());
 
-            res.sendFile(path.join(__dirname, 'welcome.html'));
+            res.sendFile(path.join(__dirname, 'index.html'));
         },
  
         onFailure: function(err) {
