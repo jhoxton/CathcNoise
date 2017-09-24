@@ -1,0 +1,7 @@
+{ "accessKeyId": "AKIAIZHHXWBYAD4MWLXQ", "secretAccessKey": "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", "region": "southeast-2" }
+// Load the SDK for JavaScript
+var AWS = require('aws-sdk');
+
+// Load credentials and set region from JSON file
+AWS.config.loadFromPath('./config.json');
+
