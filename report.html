@@ -1,0 +1,184 @@
+      <!doctype html>
+      <html>
+      <head>
+      <link rel="icon" type="icon" href="logo.icon" />
+      <meta charset="utf-8">
+      
+      <title>CatchNoise</title>
+      <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
+       <link rel="stylesheet" type="text/css" href="css/r1.css">
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script>
+      </head>
+      
+      <body >
+      <div class="wrapper"><!-- wrapper -->
+        <div class="header">  <!-- header-->
+         
+          <div class="header-bar">   <!-- header-bar-->
+          
+            <div class="logo-container" style="float: left">  <!--logo-container--> 
+              <a href="#home"> <img src="images/logo.png" > </a> 
+            </div>   <!--/logo-container-->
+              
+                    
+              <div class="icon-container"> 
+              <ul class="icon-list">
+              <li class="nav-item dropdown">
+              <div id="noti_Counter"> </div>
+              
+              <a class="nav-link count-indicator" id="notif_icon"
+               href="#" data-toggle="dropdown"> <img src='images/notif_back.png' onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
+             
+                        </a>
+                        <!--THE NOTIFICAIONS DROPDOWN BOX.-->
+            <div id="notifications">
+                <h3>Notifications</h3>
+                <div style="height:250px;"></div>
+                <div class="seeAll"><a href="#incidents">See All</a></div>
+            </div>
+                        
+                    </li>
+              
+              <li class="nav-item dropdown"><a href="#settings"><img src="images/settings2.png" class="img-cont"> </a> </li>
+              <li class="nav-item dropdown"><a href="#logout" ><img src="images/logout.png" class="img-cont"> </a> </li>
+              </ul>
+               
+               
+               
+               </div>
+              
+               </div> <!-- /header-bar-->
+           
+        </div > <!-- /header-->
+        
+        <div style="clear: both"></div>
+        <div  class="container"> <!-- container-->
+          <div class="content-wrapper">
+                    
+          <div class="sidebar"> <!-- sidebar-->
+            
+            <div class="menu"> <!-- menu-->
+             
+            <ul>
+                <li><a href="#about_us" >About us</a></li>
+                <div class="separator"></div>
+                <li><a href="#incidents" >Incidents</a></li>
+                <div class="separator"></div>
+                <li><a href="#audio" >Audio</a></li>
+                <div class="separator"></div>
+                <li><a href="#reports"  >Reports</a></li>
+                <div class="separator"></div>
+                <li><a href="#device" >Device</a></li>
+                <div class="separator"></div>
+                <li><a href="#feedback" >Feedback</a></li>
+                <div class="separator"></div>
+                <li><a href="#contact" >Contact us</a></li>
+                
+               
+              </ul>  
+            </div>
+            <!-- /menu--> 
+            
+          </div>
+          <!-- /sidebar--> 
+          
+         <!-- main-container--> 
+       
+       
+                    <div class="head">
+                    <label>From</label>
+                           <input type="date" value="date">
+                           <label>TO</label>
+                             <input type="date" value="date">
+                    </div>
+                    
+                    
+                    
+                    <div class="row ">
+                        <div class="col">
+                            <div class="card">
+                                
+                                    
+                                    <div class="table-responsive">
+                                        <table class="table ">
+                                            <thead>
+                                                <tr class="text-primary">
+                                                    <th>S.No</th>
+                                                    <th>Event ID</th>
+                                                    <th>Device ID</th>
+                                                    <th>Noise Type</th>
+                                                    <th>PDF</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td> 
+                                                    <td><a href="#" class="btn btn-danger btn-sm">Request</a></td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td> 
+                                                    <td><a href="#" class="btn btn-danger btn-sm">Request</a></td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td> 
+                                                    <td><a href="#" class="btn btn-danger btn-sm">Request</a></td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td> 
+                                                    <td><a href="#" class="btn btn-danger btn-sm">Request</a></td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td> 
+                                                    <td><a href="#" class="btn btn-danger btn-sm">Request</a></td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+      
+
+
+
+        
+        <div class="footer"> <!-- footer-->
+          
+          <div class="layout-content-box"> <!-- layout-content-box-->
+            
+            <div class="row1"> <!-- row-->
+              <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
+            </div>
+            <!-- /row--> 
+            
+          </div>
+          <!-- /layout-content-box--> 
+          
+        </div>
+        <!-- /footer--> 
+        
+      </div>
+      <!-- /wrapper -->
+        <script src="js/catchnoise.js"></script>
+      </body>
+      </html>
