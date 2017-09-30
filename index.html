@@ -9,7 +9,7 @@
     <script src="js/catchnoise.js"></script>
 </head>
 
-<body>
+<body onload="updateNotif()">
     <div class="wrapper">
         <!-- wrapper -->
         <div class="header">
@@ -23,7 +23,7 @@
                 <!--/logo-container-->
                 <div class="icon-container">
                     <a href="#user"> <img src="images/user2.png" class="img-cont"> </a>
-                    <a href="#notification"> <img src='images/notif_back.png' onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
+                    <a href="#notification"> <img src='images/notif.png' id="imgNotifId"  onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
                     <a href="#settings"><img src="images/settings2.png" class="img-cont"> </a>
                     <a href="#logout"><img src="images/logout.png" class="img-cont"> </a>
                 </div>
