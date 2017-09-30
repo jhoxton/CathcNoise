@@ -6,11 +6,13 @@ html {
     body {
       margin: 0px;
 	  padding: 0px;
-	  
+	  background-image: url(bg3.jpg);
+   background-size: cover;
+   
  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
     }
 	
-	
+
 #form 
 { 
 	text-align: left; 
@@ -158,6 +160,7 @@ font: 16px/100% Verdana, sans-serif;
 	height: 100%;
 	border: 5px #CC0033;
 	box-sizing: border-box;
+
 	}
 .menu{
 	margin-right: 0px;
@@ -318,6 +321,15 @@ table {
   background-color: white;
   position: relative;
   border-radius: 6px;
+}
+.eventTable{
+ 
+  font: 16px/100% Verdana, sans-serif;
+
+  color: white;
+   text-shadow: 2px 2px black;
+  text-decoration: none;
+
 }
 
 /* Media queries - Responsive notification-wrapper on screens less than 600px wide */
