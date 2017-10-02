@@ -1,133 +1,169 @@
-<!doctype html>
-<html>
-
-<head>
-    <link rel="icon" type="icon" href="logo.icon" />
-    <meta charset="utf-8">
-    <title>CatchNoise</title>
-    <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
-    <script src="js/catchnoise.js"></script>
-</head>
-
-<body>
-    <div class="wrapper">
-        <!-- wrapper -->
-        <div class="header">
-            <!-- header-->
-            <div class="header-bar">
-                <!-- header-bar-->
-                <div class="logo-container" style="float: left">
-                    <!--logo-container-->
-                    <a href="#home"> <img src="images/logo.png" > </a>
-                </div>
-                <!--/logo-container-->
-                <div class="icon-container">
-                    <a href="#user"> <img src="images/user2.png" class="img-cont"> </a>
-                    <a href="#notification"> <img src='images/notif_back.png' onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
-                    <a href="#settings"><img src="images/settings2.png" class="img-cont"> </a>
-                    <a href="#logout"><img src="images/logout.png" class="img-cont"> </a>
-                </div>
+      <!doctype html>
+      <html>
+      <head>
+      <link rel="icon" type="icon" href="logo.icon" />
+      <meta charset="utf-8">
+      
+      <title>CatchNoise</title>
+      <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
+       <script src="js/catchnoise.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script>
+      </head>
+      
+      <body >
+      <div class="wrapper"><!-- wrapper -->
+        <div class="header">  <!-- header-->
+         
+          <div class="header-bar">   <!-- header-bar-->
+          
+            <div class="logo-container" style="float: left">  <!--logo-container--> 
+              <a href="#home"> <img src="images/logo.png" > </a> 
+            </div>   <!--/logo-container-->
+              
+                    
+              <div class="icon-container"> 
+              <ul class="icon-list">
+              <li class="nav-item dropdown">
+              <div id="noti_Counter"> </div>
+              
+              <a class="nav-link count-indicator" id="notif_icon"
+               href="#" data-toggle="dropdown"> <img src='images/notif_back.png' onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
+             
+                        </a>
+                        <!--THE NOTIFICAIONS DROPDOWN BOX.-->
+            <div id="notifications">
+                <h3>Notifications</h3>
+                <div style="height:250px;"></div>
+                <div class="seeAll"><a href="#incidents">See All</a></div>
             </div>
-            <!-- /header-bar-->
-        </div>
-        <!-- /header-->
+                        
+                    </li>
+              
+              <li class="nav-item dropdown"><a href="#settings"><img src="images/settings2.png" class="img-cont"> </a> </li>
+              <li class="nav-item dropdown"><a href="#logout" ><img src="images/logout.png" class="img-cont"> </a> </li>
+              </ul>
+               
+               
+               
+               </div>
+              
+               </div> <!-- /header-bar-->
+           
+        </div > <!-- /header-->
+        
         <div style="clear: both"></div>
-        <div class="container">
-            <!-- container-->
-            <div class="sidebar">
-                <!-- sidebar-->
-                <div class="menu">
-                    <!-- menu-->
-                    <ul>
-                        <li><a href="index.html" class="tablinks" onclick="openlink(event, 'Incidents')" id="defaultOpen">Incidents</a></li>
-                        <div class="separator"></div>
-                        <li><a href="audio.html" class="tablinks" onclick="openlink(event, 'Audio')">Audio</a></li>
-                        <div class="separator"></div>
-                        <li><a href="reports.html" class="tablinks" onclick="openlink(event, 'Reports')">Reports</a></li>
-                        <div class="separator"></div>
-                        <li><a href="feedback.html" class="tablinks" onclick="openlink(event, 'Feedback')">Feedback</a></li>
-                        <div class="separator"></div>
-                        <li><a href="device.html" class="tablinks" onclick="openlink(event, 'Device')">Device</a></li>
-                        <div class="separator"></div>
-                        <li><a href="contact.html" class="tablinks" onclick="openlink(event, 'Contact')">Contact us</a></li>
-                        <div class="separator"></div>
-                        <li><a href="aboutUs.html" class="tablinks" onclick="openlink(event, 'About')">About us</a></li>
-                    </ul>
-                </div>
-                <!-- /menu-->
-                <!-- /menu-->
+      
+          <div class="content-wrapper"> <!-- content-wrapper-->
+                    
+          <div class="sidebar"> <!-- sidebar-->
+            
+            <div class="menu"> <!-- menu-->
+             
+            <ul>
+                <li><a href="aboutUs.html" >About us</a></li>
+                <div class="separator"></div>
+                <li><a href="incident.html" >Incidents</a></li>
+                <div class="separator"></div>
+                <li><a href="audio.html" >Audio</a></li>
+                <div class="separator"></div>
+                <li><a href="report.html"  >Reports</a></li>
+                <div class="separator"></div>
+                <li><a href="device.html" >Device</a></li>
+                <div class="separator"></div>
+                <li><a href="feedback.html" >Feedback</a></li>
+                <div class="separator"></div>
+                <li><a href="contact.html" >Contact us</a></li>
+                
+               
+              </ul>  
             </div>
-            <!-- /sidebar-->
-            <div class="main-container ">
-                <!-- main-container-->
-                <div id="Audio" class="tabcontent">
-                    <!-- Audio  -->
-                    <h3>Audio</h3>
-                    <div class="audio-wrapper">
-                        <!--audio-wrapper-->
-                        <div class="audio-head">
-                            <h3>All Incidends</h3></div>
-                        <div class="audio-container">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" checked="checked"> </td>
-                                    <td>
-                                        <label>incident 1</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" checked="checked"> </td>
-                                    <td>
-                                        <label>incident 1</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" checked="checked"> </td>
-                                    <td>
-                                        <label>incident 1</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" checked="checked"> </td>
-                                    <td>
-                                        <label>incident 1</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" checked="checked"> </td>
-                                    <td>
-                                        <label>incident 1</label>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="audio-footer">
-                            <button type="submit" value="Submit">Request Audio</button>
+            <!-- /menu--> 
+            
+          </div>
+          <!-- /sidebar--> 
+          
+         <!-- main-container--> 
+       
+       
+                    <div class="head-c">
+                    <label>Request Audio </label>
+                          
+                           
+                    </div>
+                    
+                    
+                    
+                    <div class="row ">
+                        <div class="col">
+                            <div class="card">
+                                
+                                    
+                                    <div class="table-responsive">
+                                        <table class="table ">
+                                            <thead>
+                                                <tr class="text-primary">
+                                                    
+                                                    <th colspan="2">All incidents<th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="">
+                                                    <td><input type="checkbox" type="checkbox" value=""></td>
+                                                    <td>incident 1</td> 
+                                                </tr>
+                                                <tr class="">
+                                                    <td><input type="checkbox" type="checkbox" value=""></td>
+                                                    <td>incident 1</td> 
+                                                </tr>
+                                                <tr class="">
+                                                    <td><input type="checkbox" type="checkbox" value=""></td>
+                                                    <td>incident 1</td> 
+                                                </tr>
+                                                <tr class="">
+                                                    <td><input type="checkbox" type="checkbox" value=""></td>
+                                                    <td>incident 1</td> 
+                                                </tr>
+                                                <tr class="">
+                                                    <td><input type="checkbox" type="checkbox" value=""></td>
+                                                    <td>incident 1</td> 
+                                                </tr>
+                                                <tr class="">
+                                                     
+                                                    <td colspan="2"><a href="#" class="btn btn-danger btn-sm">Request</a></td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                               
+                            </div>
                         </div>
                     </div>
-                    <!--/audio-wrapper-->
-                </div>
-                <!-- /Audio  -->
-            </div>
-        </div>
-</body>
-<div class="footer">
-    <!-- footer-->
-    <div class="layout-content-box">
-        <!-- layout-content-box-->
-        <div class="row">
-            <!-- row-->
-            <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
-        </div>
-        <!-- /row-->
-    </div>
-    <!-- /layout-content-box-->
-</div>
-<!-- /footer-->
+                </div>   <!-- /content-wrapper-->
+                
+          
+      
 
-</html>
+
+
+        
+        <div class="footer"> <!-- footer-->
+          
+          <div class="layout-content-box"> <!-- layout-content-box-->
+            
+            <div class="row1"> <!-- row-->
+              <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
+            </div>
+            <!-- /row--> 
+            
+          </div>
+          <!-- /layout-content-box--> 
+          
+        </div>
+        <!-- /footer--> 
+        
+      </div>
+      <!-- /wrapper -->
+       
+      </body>
+      </html>

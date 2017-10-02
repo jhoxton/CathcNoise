@@ -1,132 +1,174 @@
-<!doctype html>
-<html>
-
-<head>
-    <link rel="icon" type="icon" href="logo.icon" />
-    <meta charset="utf-8">
-    <title>CatchNoise</title>
-    <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
-    <script src="js/catchnoise.js"></script>
-</head>
-
-<body>
-    <div class="wrapper">
-        <!-- wrapper -->
-        <div class="header">
-            <!-- header-->
-            <div class="header-bar">
-                <!-- header-bar-->
-                <div class="logo-container" style="float: left">
-                    <!--logo-container-->
-                    <a href="#home"> <img src="images/logo.png" > </a>
-                </div>
-                <!--/logo-container-->
-                <div class="icon-container">
-                    <a href="#user"> <img src="images/user2.png" class="img-cont"> </a>
-                    <a href="#notification"> <img src='images/notif_back.png' onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
-                    <a href="#settings"><img src="images/settings2.png" class="img-cont"> </a>
-                    <a href="#logout"><img src="images/logout.png" class="img-cont"> </a>
-                </div>
+      <!doctype html>
+      <html>
+      <head>
+      <link rel="icon" type="icon" href="logo.icon" />
+      <meta charset="utf-8">
+      
+      <title>CatchNoise</title>
+      <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
+       <script src="js/catchnoise.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script>
+      </head>
+      
+      <body >
+      <div class="wrapper"><!-- wrapper -->
+        <div class="header">  <!-- header-->
+         
+          <div class="header-bar">   <!-- header-bar-->
+          
+            <div class="logo-container" style="float: left">  <!--logo-container--> 
+              <a href="#home"> <img src="images/logo.png" > </a> 
+            </div>   <!--/logo-container-->
+              
+                    
+              <div class="icon-container"> 
+              <ul class="icon-list">
+              <li class="nav-item dropdown">
+              <div id="noti_Counter"> </div>
+              
+              <a class="nav-link count-indicator" id="notif_icon"
+               href="#" data-toggle="dropdown"> <img src='images/notif_back.png' onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
+             
+                        </a>
+                        <!--THE NOTIFICAIONS DROPDOWN BOX.-->
+            <div id="notifications">
+                <h3>Notifications</h3>
+                <div style="height:250px;"></div>
+                <div class="seeAll"><a href="#incidents">See All</a></div>
             </div>
-            <!-- /header-bar-->
-        </div>
-        <!-- /header-->
+                        
+                    </li>
+              
+              <li class="nav-item dropdown"><a href="#settings"><img src="images/settings2.png" class="img-cont"> </a> </li>
+              <li class="nav-item dropdown"><a href="#logout" ><img src="images/logout.png" class="img-cont"> </a> </li>
+              </ul>
+               
+               
+               
+               </div>
+              
+               </div> <!-- /header-bar-->
+           
+        </div > <!-- /header-->
+        
         <div style="clear: both"></div>
-        <div class="container">
-            <!-- container-->
-            <div class="sidebar">
-                <!-- sidebar-->
-                <div class="menu">
-                    <!-- menu-->
-                    <ul>
-                        <li><a href="index.html" class="tablinks" onclick="openlink(event, 'Incidents')" id="defaultOpen">Incidents</a></li>
-                        <div class="separator"></div>
-                        <li><a href="audio.html" class="tablinks" onclick="openlink(event, 'Audio')">Audio</a></li>
-                        <div class="separator"></div>
-                        <li><a href="reports.html" class="tablinks" onclick="openlink(event, 'Reports')">Reports</a></li>
-                        <div class="separator"></div>
-                        <li><a href="feedback.html" class="tablinks" onclick="openlink(event, 'Feedback')">Feedback</a></li>
-                        <div class="separator"></div>
-                        <li><a href="device.html" class="tablinks" onclick="openlink(event, 'Device')">Device</a></li>
-                        <div class="separator"></div>
-                        <li><a href="contact.html" class="tablinks" onclick="openlink(event, 'Contact')">Contact us</a></li>
-                        <div class="separator"></div>
-                        <li><a href="aboutUs.html" class="tablinks" onclick="openlink(event, 'About')">About us</a></li>
-                    </ul>
-                </div>
-                <!-- /menu-->
-            </div>
-            <!-- /sidebar-->
-            <div class="main-container ">
-                <!-- main-container-->
-                <div id="Device" class="tabcontent">
-                    <!-- device  -->
-                    <h3>Device</h3>
-                    <div class="device-wrapper">
-                        <!-- device-wrapper  -->
-                        <div class="device-head">
-                            <!-- device-head  -->
-                            <button type="submit" value="Setup_c">Setup Device</button>
-                        </div>
-                        <button type="submit" value="order_c">Order Devive</button>
-                    </div>
-                </div>
-                <!-- /device-head  -->
-                <div class="device-container">
-                    <!-- device-container  -->
-                    <div class "device-table-wrapper">
-                        <!-- device-table-wrapper  -->
-                        <div class "d-t-head">
-                            <!-- d-t-head  -->
-                            <h3>Set up device</h3>
-                        </div>
-                        <!-- /d-t-head  -->
-                        <div class "d-t-content">
-                            <!-- d-t-content  -->
-                            <table>
-                                <tr>
-                                    <td>
-                                        <label>Device ID</label>
-                                    </td>
-                                    <td>
-                                        <input type="text">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label>Connect to WiFi</label>
-                                    </td>
-                                    <td>
-                                        <input type="text">
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!-- /d-t-content  -->
-                        <div class="d-t-foot">
-                            <!-- d-t-foot  -->
-                            <button type="submit" value="Setup">Setup Device</button>
-                        </div>
-                    </div>
-                    <!-- d-t-foot  -->
-                </div>
-                <!-- /device-table-wrapper  -->
-            </div>
-            <!-- /device-container  -->
-        </div>
-</body>
-<div class="footer">
-    <!-- footer-->
-    <div class="layout-content-box">
-        <!-- layout-content-box-->
-        <div class="row">
-            <!-- row-->
-            <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
-        </div>
-        <!-- /row-->
-    </div>
-    <!-- /layout-content-box-->
-</div>
-<!-- /footer-->
 
-</html>
+          <div class="content-wrapper">  <!-- content-wrapper-->
+                    
+          <div class="sidebar"> <!-- sidebar-->
+            
+            <div class="menu"> <!-- menu-->
+             
+            <ul>
+                <li><a href="aboutUs.html" >About us</a></li>
+                <div class="separator"></div>
+                <li><a href="incident.html" >Incidents</a></li>
+                <div class="separator"></div>
+                <li><a href="audio.html" >Audio</a></li>
+                <div class="separator"></div>
+                <li><a href="report.html"  >Reports</a></li>
+                <div class="separator"></div>
+                <li><a href="device.html" >Device</a></li>
+                <div class="separator"></div>
+                <li><a href="feedback.html" >Feedback</a></li>
+                <div class="separator"></div>
+                <li><a href="contact.html" >Contact us</a></li>
+               
+              </ul>  
+            </div>
+            <!-- /menu--> 
+            
+          </div>
+          <!-- /sidebar--> 
+          
+         <div><!-- main-container--> 
+       
+       
+                    <div class="head-c">
+                    <label>From</label>
+                           
+                    </div>
+                    <!-- accordian-->
+                     
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Device</h5>
+                                    <div id="accordion" role="tablist" aria-multiselectable="true" class="accordion">
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingOne">
+                                                <h5 class="mb-0">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Setup Device
+                                                    </a>
+                                                </h5>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="card-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" role="tab" id="headingTwo">
+                                                <h5 class="mb-0">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Order Device
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="card-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+                     <!--/accordian-->
+           </div>    <!-- /main-container-->      
+                    
+                </div>  <!-- /content-wrapper-->
+                
+       
+      
+
+
+
+        
+        <div class="footer"> <!-- footer-->
+          
+          <div class="layout-content-box"> <!-- layout-content-box-->
+            
+            <div class="row1"> <!-- row-->
+              <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
+            </div>
+            <!-- /row--> 
+            
+          </div>
+          <!-- /layout-content-box--> 
+          
+        </div>
+        <!-- /footer--> 
+        
+      </div>
+      <!-- /wrapper -->
+       
+      </body>
+      </html>

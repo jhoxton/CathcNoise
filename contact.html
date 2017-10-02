@@ -39,19 +39,19 @@
                 <div class="menu">
                     <!-- menu-->
                     <ul>
-                        <li><a href="index.html" class="tablinks" onclick="openlink(event, 'Incidents')" id="defaultOpen">Incidents</a></li>
-                        <div class="separator"></div>
-                        <li><a href="audio.html" class="tablinks" onclick="openlink(event, 'Audio')">Audio</a></li>
-                        <div class="separator"></div>
-                        <li><a href="reports.html" class="tablinks" onclick="openlink(event, 'Reports')">Reports</a></li>
-                        <div class="separator"></div>
-                        <li><a href="feedback.html" class="tablinks" onclick="openlink(event, 'Feedback')">Feedback</a></li>
-                        <div class="separator"></div>
-                        <li><a href="device.html" class="tablinks" onclick="openlink(event, 'Device')">Device</a></li>
-                        <div class="separator"></div>
-                        <li><a href="contact.html" class="tablinks" onclick="openlink(event, 'Contact')">Contact us</a></li>
-                        <div class="separator"></div>
-                        <li><a href="aboutUs.html" class="tablinks" onclick="openlink(event, 'About')">About us</a></li>
+                       <li><a href="aboutUs.html" >About us</a></li>
+                <div class="separator"></div>
+                <li><a href="incident.html" >Incidents</a></li>
+                <div class="separator"></div>
+                <li><a href="audio.html" >Audio</a></li>
+                <div class="separator"></div>
+                <li><a href="report.html"  >Reports</a></li>
+                <div class="separator"></div>
+                <li><a href="device.html" >Device</a></li>
+                <div class="separator"></div>
+                <li><a href="feedback.html" >Feedback</a></li>
+                <div class="separator"></div>
+                <li><a href="contact.html" >Contact us</a></li>
                     </ul>
                 </div>
                 <!-- /menu-->
@@ -65,17 +65,18 @@
   <form id ="form" action="">
 <table>
 <tr><td>
-    <label for="fname">First Name</label></td></td>
-  <tr><td>  <input type="text" id="fname" name="firstname"></td></td>
+    <label>First Name</label></td></td>
+  <tr><td>  <input type="text" id="textbox" name="firstname" placeholder="First Name"></td></td>
 
-   <tr><td> <label for="lname">Last Name</label></td></td>
-    <tr><td><input type="text" id="lname" name="lastname" ></td></td>
-	<tr><td><label for="email">Email</label></td></td>
-	<tr><td><input type ="text" id="email" name="email"></td></td>
+   <tr><td><label>Last Name</label></label></td></tr>
+    <tr><td><input type="text" id="textbox" name="lastname" placeholder="Surname"></td></td>
+	<tr><td><label>Email</label></td></td>
+	<tr><td><input type ="text" id="textbox" name="email" placeholder="Email"></td></td>
     
 
     <tr><td><label for="subject">Subject</label></td></td>
-   <tr><td> <textarea name="subject"  style="height:200px"></textarea></td></td>
+   <tr><td> <textarea rows="4" cols="50" placeholder="Message">
+</textarea></td></td>
 
     <tr><td><input type="submit" value="Submit"></td></td>
 </table>
