@@ -32,6 +32,8 @@ function addEvent() //This will be the function that takes data from the Dynamo 
 			document.getElementById("imgNotifId").src ="images/notif.png";
 		}
 	}
+	var number = "123";
+    document.getElementById("TEST").innerHTML = number;
 	
 // function openCity(evt, cityName) {
 //     var i, tabcontent, tablinks;
