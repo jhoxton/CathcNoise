@@ -1,4 +1,4 @@
-// console.log("FUCKING WORKED CUNT");
+
 // console.log(AWS);
 
 // console.log(CONFIG);
