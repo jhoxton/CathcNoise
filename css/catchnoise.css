@@ -6,9 +6,7 @@ html {
     body {
       margin: 0px;
 	  padding: 0px;
-	 
-   background-size: cover;
-   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+   font: MS sans-serif;
 
     }
 .wrapper{
@@ -81,6 +79,7 @@ ul.icon-list li{
         font:13px helvetica;
         font-weight:bold;
         margin:3px 0;
+		
     }
  .icon-list ul li a {
         color:#FFF;
@@ -93,83 +92,13 @@ ul.icon-list li{
         text-decoration:none;
         cursor:pointer;
     }
-	
+.user-name{
+	color: white;
+	margin:10px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:20px;}
   /* Notification */	
-        
-    #noti_Container {
-        position:relative;
-    }
-       
-    
-        
-    /* THE POPULAR RED NOTIFICATIONS COUNTER. */
-    #noti_Counter {
-        display:block;
-        position:absolute;
-        background:#E1141E;
-        color:#FFF;
-        font-size:12px;
-        font-weight:normal;
-        padding:1px 3px;
-        margin:-8px 0 0 25px;
-        border-radius:2px;
-        -moz-border-radius:2px; 
-        -webkit-border-radius:2px;
-        z-index:1;
-    }
-        
-    /* THE NOTIFICAIONS WINDOW. THIS REMAINS HIDDEN WHEN THE PAGE LOADS. */
-    #notifications {
-        display:none;
-        width:250px;
-        position:absolute;
-        top:30px;
-        right:0;
-        background:#FFF;
-        border:solid 1px rgba(100, 100, 100, .20);
-        -webkit-box-shadow:0 3px 8px rgba(0, 0, 0, .20);
-        z-index: 0;
-    }
-    /* AN ARROW LIKE STRUCTURE JUST OVER THE NOTIFICATIONS WINDOW */
-    #notifications:before {         
-        content: '';
-        display:block;
-        width:0;
-        height:0;
-        color:transparent;
-        border:10px solid #CCC;
-        border-color:transparent transparent #FFF;
-        margin-top:-20px;
-        margin-left:10px;
-    }
-        
-    h3 {
-        display:block;
-        color:#333; 
-        background:#FFF;
-        font-weight:bold;
-        font-size:13px;    
-        padding:8px;
-        margin:0;
-        border-bottom:solid 1px rgba(100, 100, 100, .30);
-    }
-        
-    .seeAll {
-        background:#F6F7F8;
-        padding:8px;
-        font-size:12px;
-        font-weight:bold;
-        border-top:solid 1px rgba(100, 100, 100, .30);
-        text-align:center;
-    }
-    .seeAll a {
-        color:#3b5998;
-    }
-    .seeAll a:hover {
-        background:#F6F7F8;
-        color:#3b5998;
-        text-decoration:underline;
-    }
+   
 
 
    /*footer*/
@@ -231,18 +160,19 @@ ul.icon-list li{
 	float: left;
 }
 .main-container{
-	 background-image: url(bg3.jpg);
+	 
 	width:80%;
 	overflow: hidden;
 	margin: 0px;
-    color: ;
+    background:  #2E3948;
 	height: 100%;
 	border: 5px #CC0033;
 	box-sizing: border-box;
 	 min-height: 100vh;
-	 color: white;
-   text-shadow: 2px 2px black;
+	 color: #333;
+   
    text-decoration: none;
+       text-shadow: #fff 0 1px 0;
 	}
 	
 	  
@@ -259,14 +189,13 @@ ul.icon-list li{
   margin: 15px;
 }
 .sidebar .menu a {
-  color: #DDD;
+  color: #FFF;
   text-decoration: none;
 }
 .sidebar .menu a:hover {
   color: #232f3e;
+  
 }
-
- 
  .sidebar .menu > ul > li {
   list-style: none;
 }
@@ -275,7 +204,8 @@ ul.icon-list li{
 	font-size: 24px;
 	padding-top: 10px;
 	display: block;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
 }
 .sidebar .menu > ul > li > a:before {
   height: 10px;
@@ -284,47 +214,19 @@ ul.icon-list li{
   margin-right: 5px;
 }
 .sidebar .menu > ul > li.active {
-  list-style-type: desc;
+  
   color: #232f3e;
   padding-bottom: 10px;
 }
 .sidebar .menu > ul > li.active > a {
   padding-bottom: 10px;
+  background: #232f3e;
   
 }
  .sidebar .menu > ul > li.active > a:before {
   background: #FF3A3A;
   box-shadow: none;
-}
-
-
-
-	/*    for java script  */
-	
-table {	
-    width: 100%;
-    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-    font-size: 16px;
-	line-height: 22.4px;
-	border:none;
-	color:;
-	background-color:
-	
-	} 
-.eventTable input[type=text] {
-    width: 100%;
-    padding: 5px 5px;
-    margin: 8px 0;
-    display: inline-block;
-    border:none;
-    box-sizing: border-box;
-}
-	
-	@charset "utf-8";
-/* CSS Document */
-
-
-	  
+}	  
 .contain-flu {
   width: 100%;
   margin-right: auto;
@@ -342,8 +244,9 @@ span {
 	  .head-c {
     color: #232f3e;
     padding-top:30px;
+	padding-bottom:30px;
     font-size: 24px;
-   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+   font-family: MS Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	text-align:center;
 }
 
@@ -351,24 +254,30 @@ span {
 .row {
     display: flex;
     flex-wrap: wrap;
-    
-	text-align:center;
-
 	
 }
 
 
 .col{
 	    position: relative;
-    width: 100%;
+     width:100%;
+	
     min-height: 1px;
-    padding-right: ;
+    padding: ;
     padding-left: ;
 	
 }
+.col-s { width:40%;
+left:30%;}
+.col-m { width:50%;
+left:25%;}
+.col-l { width:80%;
+left:10%;}
+
 .card {
-    border: 0;
-    border-radius: 0;
+    border: 2px;
+	padding:20px;
+    border-radius: 5px;
 }
 
 .card {
@@ -377,11 +286,11 @@ span {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #fffaf2;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
-	 padding: 1.9rem 1.5rem;
+    border-radius: 5px;;
+	 
 }
 
 
@@ -389,21 +298,35 @@ label {
   display: inline-block;
   margin-bottom: 10px; }
 
-.card-title {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-}
-
-.card-title {
-    margin-top:20px;
-}
 .table-responsive {
+	margin:0px;
     display: block;
     width: 100%;
     overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-table {
+table {	
+    width: 100%;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 20px;
+	line-height: 28px;
+	border:none;
+	color:;
+	border-collapse:collapse;
+	background-color:;
+	text-align: left;
+	
+	} 
+.eventTable input[type=text] {
+    width: 100%;
+    padding: 5px 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border:none;
+	
+    box-sizing: border-box;
+}
+.table {
     margin-bottom: 0;
 }
 
@@ -413,26 +336,24 @@ table {
 
 .table-bordered, .table {
     border: 1px solid #e9ecef;
+	border-radius: 10px;
 }
 
 .table {
-    width: 100%;
     max-width: 100%;
-    margin-bottom: 1rem;
     background-color: transparent;
 }
 
 .table {
     border-collapse: collapse;
+	
 }
 
-
-
 .table {
-    display: table;
+   display: table;
+	border-color: white;
     border-collapse: separate;
-    border-spacing: 2px;
-    border-color: grey;
+      
 }
 thead {
     display: table-header-group;
@@ -444,36 +365,31 @@ tbody {
     vertical-align: middle;
     border-color: inherit;
 }
-
-
+tr td{
+	    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing:border-box;
 	
-		
-	/*     main container for java script  */  
-	
+	}
+tr{
+	display:table-row;
+	border: 1px solid #000;}
 
-/* inciication */
+/* incident */
 
 .incident-wrapper {
   
-  margin: 0px;
-  background-color:  #d0dae1;
-  padding: 10px;
-  height: 737px; ;
+  margin: 20px;
+ background-color: #fffaf2;
+  padding: 20px;
+  height: 500px; ;
   overflow-y: scroll;
+  border-radius: 5px;
 }
-
-/* The actual incident-wrapper (the vertical ruler) */
-.incident-wrapper::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 3%;
-  margin-left: -3px;
-}
-
 /* Container around content */
 .inci {
   padding: 10px 60px;
@@ -482,135 +398,17 @@ tbody {
   width: 50%;
   
 }
-
-/* The circles on the incident-wrapper */
-.inci::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 5px solid #FF9900;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-/* Add arrows to the left container (pointing left) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 50px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the left side */
-.left::after {
-  left: 10px;
-}
-
 /* The actual content */
 .inci-container {
   padding: 10px 10px;
-  background-color: white;
   position: relative;
   border-radius: 6px;
+  
 }
-
-/* Media queries - Responsive incident-wrapper on screens less than 600px wide */
-@media all and (max-width: 600px) {
-/* Place the timelime to the left  */
-  .incident-wrapper::after {
-    left: 31px;
-  }
-
-/* Full-width containers */
-  .inci {
-    width: 100%;
-    
-  }
-
-/* Make sure that all arrows are pointing leftwards */
-  .inci::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-.inci-container-head{}
-.inci-container-content{}
-.inci-container-foot{}
-
-/* Audio */
-.audio-wrapper{}
-.audio-head{}
-.audio-container{}
-.audio-footer{}
-/* Report */
-.report-wrapper{}
-.report-head{}
-.report-container{}
-/* Device */
-.card .card-body {
-    padding: 1.9rem 1.5rem;
-}
-.card-body {
-    flex: 1 1 auto;
-    padding: 1.25rem;
-}
-    
-accordion .card {
-  margin-bottom: 15px; }
-  .accordion .card .card-header {
-    background-color: transparent;
-    border: 1px solid #d4d4d4; }
-    .accordion .card .card-header a {
-      color: #302f3f;
-      text-decoration: none;
-      font-size: 1rem; }
-.card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
-}
-style.css:2597
-.card-header {
-    padding: 0.75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: rgba(0, 0, 0, 0.03);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-}
-.collapse.show {
-    display: block;
-}
-
-style.css:1753
-.collapse {
-    display: none;
-}
-
-
-.card-title {
-    margin-bottom: 0.75rem;
-	font-size: 1.125rem;
-    line-height: 1.375rem;
-}
-
-.device-wrapper{}
-.device-head{}
-.device-container{}
-.device-table-wrapper{}
-.d-t-head{}
-.d-t-content{}
-.d-t-foot{}
 /* notification */
-  
-        
-  
-        
+
+
+
+
+
+    
