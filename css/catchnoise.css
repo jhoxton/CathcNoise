@@ -5,48 +5,48 @@ html {
 }
     body {
       margin: 0px;
-	  padding: 0px;
-	 
+    padding: 0px;
+   
    background-size: cover;
    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 
     }
 .wrapper{
-	
-	height: 100%;
-	width: 100%;
-	position: absolute;
+  
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
  /*header*/
 .header {
-	top: 0px;
-	background-color: #232f3e;
+  top: 0px;
+  background-color: #232f3e;
     box-shadow: 0 1px 1px #888;
     height:  110px;
     width: 100%;
-	position: relative;
+  position: relative;
 }
 .header-bar{
-	padding: 5px 5px;
+  padding: 5px 5px;
 }
 .logo-container{
-	padding: 5px 0px;
+  padding: 5px 0px;
     
     width: auto;
     border: none;
     outline: none;  
 }
 .head{
-	top: 0px;
-	position: relative
-	}
+  top: 0px;
+  position: relative
+  }
 .icon-container{
-	float: right;
-	padding-left:15px;
-	padding-right: 15px;
+  float: right;
+  padding-left:15px;
+  padding-right: 15px;
     padding-top: 25px;
-	padding-bottom: 25px;
-	width:auto;
+  padding-bottom: 25px;
+  width:auto;
 }
 .dropdown {
   position: relative; }
@@ -66,13 +66,13 @@ html {
     margin: 0;
     padding: 0;}
 ul.icon-list li{
-	display:inline;}
+  display:inline;}
 .img-cont{
-	padding: 8px 5px;
+  padding: 8px 5px;
     width: auto;
     border: none;
     outline: none;
-	position:relative;
+  position:relative;
    
 }
  /* icons in header */
@@ -93,8 +93,8 @@ ul.icon-list li{
         text-decoration:none;
         cursor:pointer;
     }
-	
-  /* Notification */	
+  
+  /* Notification */  
         
     #noti_Container {
         position:relative;
@@ -179,13 +179,13 @@ ul.icon-list li{
       margin-left: 0;
       width: 100%; } }
 .footer {
-	background-color: #232f3e;
-	box-shadow: 0 1px 1px #888;
-	width: 100%;	
-	color: white;
-	display: block;
-	height: auto;
-	position: relative;
+  background-color: #232f3e;
+  box-shadow: 0 1px 1px #888;
+  width: 100%;  
+  color: white;
+  display: block;
+  height: auto;
+  position: relative;
     padding: 0 0 60px;
 }
 .layout-content-box {
@@ -193,19 +193,19 @@ ul.icon-list li{
 }
 
 .row1 {
-	float: right;
-	padding: 10px;
+  float: right;
+  padding: 10px;
 }
 
 .row1 p  {
     font-size: 16px;
-	line-height: 22.4px;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  line-height: 22.4px;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
  /*container*/
 
-	.content-wrapper {
-		
+  .content-wrapper {
+    
   overflow: hidden;
   position: relative;
   background: #edf1f5;
@@ -222,36 +222,44 @@ ul.icon-list li{
 
 .sidebar {
     
-	overflow: hidden;
-	margin: 0px;
+  overflow: hidden;
+  margin: 0px;
     width: 20%;
     background: #FF9900;
     color: #DDD;
-	 min-height: 100vh;
-	float: left;
+   min-height: 100vh;
+  float: left;
 }
 .main-container{
-	 background-image: url(bg3.jpg);
-	width:80%;
-	overflow: hidden;
-	margin: 0px;
+   background-image: url(bg3.jpg);
+  width:80%;
+  overflow: hidden;
+  margin: 0px;
     color: ;
-	height: 100%;
-	border: 5px #CC0033;
-	box-sizing: border-box;
-	 min-height: 100vh;
-	 color: white;
+  height: 100%;
+  border: 5px #CC0033;
+  box-sizing: border-box;
+   min-height: 100vh;
+   color: white;
    text-shadow: 2px 2px black;
    text-decoration: none;
-	}
-	
-	  
+  }
+                                  /*NEW CSS HERE*/
+                                  .tabcontent {
+                                   
+                                   color: black;
+                                   text-shadow: 2px 2px white;
+                                   text-decoration: none;
+                                     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+                                  }
+                                  /*END NEW CSS HERE*/
+    
 .menu{
-	margin-right: 0px;
-	margin-left: 0px;
-	margin-top: 50px;
-	
-	
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 50px;
+  
+  
 }
 
  .sidebar .menu .separator {
@@ -271,11 +279,11 @@ ul.icon-list li{
   list-style: none;
 }
 .sidebar .menu > ul > li > a {
-	position: relative;
-	font-size: 24px;
-	padding-top: 10px;
-	display: block;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  position: relative;
+  font-size: 24px;
+  padding-top: 10px;
+  display: block;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 .sidebar .menu > ul > li > a:before {
   height: 10px;
@@ -299,18 +307,18 @@ ul.icon-list li{
 
 
 
-	/*    for java script  */
-	
-table {	
+  /*    for java script  */
+  
+table { 
     width: 100%;
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
     font-size: 16px;
-	line-height: 22.4px;
-	border:none;
-	color:;
-	background-color:
-	
-	} 
+  line-height: 22.4px;
+  border:none;
+  color:;
+  background-color:
+  
+  } 
 .eventTable input[type=text] {
     width: 100%;
     padding: 5px 5px;
@@ -319,12 +327,12 @@ table {
     border:none;
     box-sizing: border-box;
 }
-	
-	@charset "utf-8";
+  
+  @charset "utf-8";
 /* CSS Document */
 
 
-	  
+    
 .contain-flu {
   width: 100%;
   margin-right: auto;
@@ -336,15 +344,15 @@ span {
     text-shadow: none;
 }
 .float-right{
-	float:right;}
+  float:right;}
 
-	 /* For table*/  
-	  .head-c {
+   /* For table*/  
+    .head-c {
     color: #232f3e;
     padding-top:30px;
     font-size: 24px;
    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	text-align:center;
+  text-align:center;
 }
 
 
@@ -352,19 +360,19 @@ span {
     display: flex;
     flex-wrap: wrap;
     
-	text-align:center;
+  text-align:center;
 
-	
+  
 }
 
 
 .col{
-	    position: relative;
+      position: relative;
     width: 100%;
     min-height: 1px;
     padding-right: ;
     padding-left: ;
-	
+  
 }
 .card {
     border: 0;
@@ -381,7 +389,7 @@ span {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
-	 padding: 1.9rem 1.5rem;
+   padding: 1.9rem 1.5rem;
 }
 
 
@@ -446,10 +454,10 @@ tbody {
 }
 
 
-	
-		
-	/*     main container for java script  */  
-	
+  
+    
+  /*     main container for java script  */  
+  
 
 /* inciication */
 
@@ -598,7 +606,7 @@ style.css:1753
 
 .card-title {
     margin-bottom: 0.75rem;
-	font-size: 1.125rem;
+  font-size: 1.125rem;
     line-height: 1.375rem;
 }
 

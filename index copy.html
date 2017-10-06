@@ -7,11 +7,13 @@
     <meta charset="utf-8">
     <title>CatchNoise</title>
     <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
+    
+
     <script src="libs/aws-sdk-2.125.0.js"></script>
+        <script src="js/catchnoise.js"></script>
     <script src="js/config.js"></script>
     <script src="js/dbConnect.js"></script>
 
-    <script src="js/catchnoise.js"></script>
 </head>
 
 <body onload="updateNotif()">
@@ -89,6 +91,18 @@
             <div class="main-container ">
                 <!-- main-container-->
                 <!-- example-->
+
+
+
+
+
+
+
+
+
+
+
+                <!-- NEW HTML HERE -->
                 <div id="Incidents" class="tabcontent">
                     <!-- incident  -->
                     <!--inciication*/-->
@@ -105,27 +119,27 @@
                                             <tr>
                                                 <td>Device ID:</td>
                                                 <td> 
-                                                    <div id="TEST"></div>
-                                                   <!--  <input type="text" name="id" id="TEST" /> -->
+                                                    <!-- <div id="TEST"></div> -->
+                                                   <div id="id"></div>
 
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Time Stamp:</td>
                                                 <td>
-                                                    <input type="text" name="db" id="db" />
+                                                  <div id="timeStamp"></div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Type:</td>
                                                 <td>
-                                                    <input type="text" name="id" id="id" />
+                                                   <div id="type"></div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>db Level:</td>
                                                 <td>
-                                                    <input type="text" name="db" id="db" />
+                                                  <div id="db"></div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -134,86 +148,24 @@
                                 <div class="inci-container-foot"></div>
                             </div>
                         </div>
-                        <!--2-->
-                        <div class="inci left">
-                            <div class="inci-container">
-                                <div class="inci-container-head">
-                                    <h3>Incident</h3>
-                                </div>
-                                <div class="inci-container-content">
-                                    <div class="eventTable">
-                                        <table border=1>
-                                            <tr>
-                                                <td>Device ID:</td>
-                                                <td>
-                                                    <input type="text" name="id" id="id" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Time Stamp:</td>
-                                                <td>
-                                                    <input type="text" name="db" id="db" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Type:</td>
-                                                <td>
-                                                    <input type="text" name="id" id="id" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>db Level:</td>
-                                                <td>
-                                                    <input type="text" name="db" id="db" />
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="inci-container-foot"></div>
-                            </div>
-                        </div>
+                        
                         <!--3-->
-                        <div class="inci left">
-                            <div class="inci-container">
-                                <div class="inci-container-head">
-                                    <h3>Incident</h3>
-                                </div>
-                                <div class="inci-container-content">
-                                    <div class="eventTable">
-                                        <table border=1>
-                                            <tr>
-                                                <td>Device ID:</td>
-                                                <td>
-                                                    <input type="text" name="id" id="id" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Time Stamp:</td>
-                                                <td>
-                                                    <input type="text" name="db" id="db" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Type:</td>
-                                                <td>
-                                                    <input type="text" name="id" id="id" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>db Level:</td>
-                                                <td>
-                                                    <input type="text" name="db" id="db" />
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="inci-container-foot"></div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
+                <!-- END NEW HTML HERE -->
+
+
+
+
+
+
+
+
+
+
+
+
                 <!-- /incident  -->
                 <!-- /example-->
             </div>
