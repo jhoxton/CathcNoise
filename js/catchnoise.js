@@ -1,39 +1,61 @@
 
-function printEvents(eventList) //This will be the function that takes data from the Dynamo DB and writes it to the webpage
-{
-    //This just prints the current time and date
-    // var date = new Date();
-    // var n = date.toDateString();
-    // var time = date.toLocaleTimeString();
+// function printEvents(eventList) //This will be the function that takes data from the Dynamo DB and writes it to the webpage
+// {
+//     //This just prints the current time and date
+//     // var date = new Date();
+//     // var n = date.toDateString();
+//     // var time = date.toLocaleTimeString();
 
-    var id = document.getElementById('id').value; // This will be the device ID
-    var db = document.getElementById('db').value; //This will be the recorded volume
-    // var time =document.getElementById('time').value; //This is just a "print string" function for the date tab. Probably won't need it
-    var time = date; //This just prints the current time and date
-    var table = document.getElementsByTagName('table')[0];
-    var newRow = table.insertRow(1);
-    var cel1 = newRow.insertCell(0);
-    var cel2 = newRow.insertCell(1);
-    var cel3 = newRow.insertCell(2);
-    cel1.innerHTML = id;
-    cel2.innerHTML = db;
-    cel3.innerHTML = time;
-}
+//     // var id = document.getElementById('id').value; // This will be the device ID
+//     // var db = document.getElementById('db').value; //This will be the recorded volume
+//     // var time =document.getElementById('time').value; //This is just a "print string" function for the date tab. Probably won't need it
+//     // var time = date; //This just prints the current time and date
+    
+//     var table = document.getElementsByTagName('table')[0];
+//     var newRow = table.insertRow(1);
+//     var cel1 = newRow.insertCell(0);
+//     var cel2 = newRow.insertCell(1);
+//     var cel3 = newRow.insertCell(2);
+//     cel1.innerHTML = id;
+//     cel2.innerHTML = db;
+//     cel3.innerHTML = time;
+// }
 
-function printEvents(eventList) {
-	 // document.getElementById("TEST").innerHTML =eventList[0].EventID;//TEST ID PRINT
-	 
+function checkArray(eventList) { //This method doesn't get called until "dbConnect" has loaded
     for (var i = eventList.length - 1; i >= 0; i--) {
-        // console.log("JS, array's eventID is", eventList[i].EventID); //Prints eventID's in the arraylist
-        //  console.log("JS, array's timeStamp is", eventList[i].TimeStamp);
-
+        console.log(eventList[i].EventID);
         document.getElementById("id").innerHTML = eventList[i].EventID;
-        document.getElementById("timeStamp").innerHTML = eventList[i].TimeStamp;
+        document.getElementById("timeStamp").innerHTML = eventList[i].Timestamp;
         document.getElementById("type").innerHTML = eventList[i].SourceType;
         document.getElementById("db").innerHTML = eventList[i].dB_level;
 
-    };
+   
+
+    }
+
 }
+
+// function printEvents(eventList) {
+// 	 // document.getElementById("TEST").innerHTML =eventList[0].EventID;//TEST ID PRINT
+	 
+//     for (var i = eventList.length - 1; i >= 0; i--) {
+
+//         console.log("=================================")
+//         console.log("Passed eventList Event = ", eventList[i].EventID);
+//             console.log("Passed eventList Time = ", eventList[i].Timestamp);
+//             console.log("Passed eventList Source = ", eventList[i].SourceType);
+//             console.log("Passed  eventList db = ", eventList[i].dB_level);
+                        
+
+          
+
+//         // document.getElementById("id").innerHTML = eventList[i].EventID;
+//         // document.getElementById("timeStamp").innerHTML = eventList[i].TimeStamp;
+//         // document.getElementById("type").innerHTML = eventList[i].SourceType;
+//         // document.getElementById("db").innerHTML = eventList[i].dB_level;
+
+//     };
+// }
 
 window.onLoad = updateNotif(newEvent);
 var newEvent = true; //When a new notification arrives, this will become true
