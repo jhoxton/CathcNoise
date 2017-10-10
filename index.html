@@ -6,10 +6,15 @@
     <meta charset="utf-8">
     <title>CatchNoise</title>
     <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
+    
+    <script src="libs/aws-sdk-2.125.0.js"></script>
     <script src="js/catchnoise.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/dbConnect.js"></script>
+
 </head>
 
-<body onload="updateNotif()">
+<body onload="makeTable()">
     <div class="wrapper">
         <!-- wrapper -->
         <div class="header">
@@ -78,6 +83,7 @@
               </ul>
             </div> -->
             <div class="main-container ">
+        
                 <!-- main-container-->
                 <!-- example-->
                 <div id="Incidents" class="tabcontent">

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Table Test 3</title>
+ <script>
+      function makeTable() {
+
+
+          for (i = 0; i < 5; i++) {  //HOW MANY TABLES TO MAKE - in this case, the Event array length
+            var tableVar= '';
+            var rows = 4;
+            var cols = 2;
+            
+            var id ="ID DATA"; //The currently iterated objects data
+            var time  ="TIME DATA";
+            var type  ="TYPE DATA";
+            var db  ="DB DATA";
+
+
+                tableVar +='<tr>';
+                tableVar+='<td>'+ "Device ID" + '</td>'; //Title
+                tableVar+='<td>'+ id + '</td>';     //Data
+                tableVar +='</tr>'; 
+
+
+                tableVar +='<tr>';
+                tableVar+='<td>'+ "Time Stamp" + '</td>'; 
+                tableVar+='<td>'+ time + '</td>';   
+                tableVar +='</tr>'; 
+
+                tableVar +='<tr>';
+                tableVar+='<td>'+ "Type" + '</td>'; 
+                tableVar+='<td>'+ type + '</td>';   
+                tableVar +='</tr>'; 
+       
+                tableVar +='<tr>';
+                tableVar+='<td>'+ "Volume " + '</td>'; 
+                tableVar+='<td>'+ db + '</td>';   
+                tableVar +='</tr>'; 
+
+            document.write('<table border="1">' + tableVar + '</table>')
+        }
+    }
+    </script>
+</head>
+
+<body >
+    <!-- onload="makeTable()" -->
+<button onclick="makeTable();">Populate Table</button>
+
+   
+
+</body>
+
+</html>
+

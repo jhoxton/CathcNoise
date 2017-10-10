@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table 3 Test</title>
+
+</head>
+<body>
+<table>
+    <tbody id="tbody"></tbody>
+</table>
+<button onclick="table3();">Populate Table</button>
+</body>
+<script>
+	function table3() {
+		var obj = [{
+    "key": "apple",
+    "value": 1.90
+}, {
+    "key": "berry",
+    "value": 1.7
+}, {
+    "key": "banana",
+    "value": 1.5
+}, {
+    "key": "cherry",
+    "value": 1.2
+}];
+var globalCounter = 0;
+var tbody = document.getElementById('tbody');
+for (var i = 0; i < Object.keys(obj).length; i++) {
+    var tr = "<tr>";
+    if (obj[i].value.toString().substring(obj[i].value.toString().indexOf('.'), obj[i].value.toString().length) < 2) obj[i].value += "0";
+
+    tr += "<td>" + obj[i].key + "</td>" + "<td>" + obj[i].value.toString() + "</td></tr>";
+    tbody.innerHTML += tr;
+}
+	}
+</script>
+</html>
