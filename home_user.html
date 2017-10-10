@@ -6,8 +6,12 @@
       
       <title>CatchNoise</title>
       <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
-       <script src="js/catchnoise.js"></script>
-       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script>
+      <script src="libs/aws-sdk-2.125.0.js"></script>
+      
+      <script src="js/config.js"></script>
+      <script src="js/dbConnect.js"></script>
+      <script src="js/catchnoise.js"></script>
       </head>
       
       <body >
@@ -26,7 +30,7 @@
                <li class="nav-item dropdown"><label class="user-name"> User Name</label> </li>
               <li class="nav-item dropdown"><a href="#user" ><img src="images/user1.png" class="img-cont"> </a> </li>
               <li><a class="nav-link count-indicator" id="notif_icon"
-               href="#" data-toggle="dropdown"> <img src='images/notif_back.png' onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
+               href="#" data-toggle="dropdown"> <img src='images/notif.png' onmouseover="this.src='images/notif1.png';" onmouseout= "this.src='images/notif.png';" class="img-cont"> </a>
                </li>
               <li class="nav-item dropdown"><a href="#settings"><img src="images/settings2.png" class="img-cont"> </a> </li>
               <li class="nav-item dropdown"><a href="#logout" ><img src="images/logout.png" class="img-cont"> </a> </li>
@@ -77,12 +81,17 @@
             <div class="head-c">
                     <label>From</label>
                            <input type="date" value="date">
-                           <label>TO</label>
+                           <label>To</label>
                              <input type="date" value="date">
                     </div>
                     
          
               <div class="table-responsive">
+                <div id="import"></div>
+              <!--  <table>
+    <tbody id="tbody"></tbody>
+</table>
+<button onclick="table3();">Populate Table</button>  -->
                                     <form id="report" method="" action="">
                                         <table class="table ">
                                             <thead>
@@ -92,18 +101,38 @@
                                                     <th>DB Level</th>
                                                     <th>Type</th>
                                                     <th>Download</th>
+
+
                                                 </tr>
                                             </thead>
+
                                             <tbody>
                                                 <tr class="">
-                                                    <td>1</td>
-                                                    <td>2</td>
-                                                    <td>3</td>
-                                                    <td>4</td> 
+                                                    <td id="idPrint"></td>
+                                                    <td id="timeStampPrint"></td>
+                                                    <td id="typePrint"></td>
+                                                    <td id="dbPrint"></td> 
                                                     
-                                                    <td><a href="#" class="">Audio</a></td>
+                                                    <td>
+                                                      <td id="audioPrint"></td>
+                                                      <!-- <a href="#" class="audioPrint">Audio</a> -->
+                                                    </td>
                                                 </tr>
-                                                <tr class="">
+                                                <!-- <tr class="">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td> 
+                                                    <td><a href="#" class="">Audio</a></td>
+                                                </tr> -->
+                                              <!--   <tr class="">
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td> 
+                                                    <td><a href="#" class="">Audio</a></td>
+                                                </tr> -->
+                                            <!--     <tr class="">
                                                     <td>1</td>
                                                     <td>2</td>
                                                     <td>3</td>
@@ -116,28 +145,19 @@
                                                     <td>3</td>
                                                     <td>4</td> 
                                                     <td><a href="#" class="">Audio</a></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>1</td>
-                                                    <td>2</td>
-                                                    <td>3</td>
-                                                    <td>4</td> 
-                                                    <td><a href="#" class="">Audio</a></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>1</td>
-                                                    <td>2</td>
-                                                    <td>3</td>
-                                                    <td>4</td> 
-                                                    <td><a href="#" class="">Audio</a></td>
-                                                </tr>
-                                                <tr class="">
+                                                </tr> -->
+                                                <tr>
                                                     <td colspan="5" ><input id="report-request" type="submit" value=" Report"</td>
                                                     
                                                 </tr>
                                             </tbody>
                                         </table>
+                                      
+                                       
                                         </form>
+                                     
+                                         
+                                           
                                     </div>
                                
       
