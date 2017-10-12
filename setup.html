@@ -5,6 +5,7 @@
       <meta charset="utf-8">
       
       <title>CatchNoise</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
        <script src="js/catchnoise.js"></script>
        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script>
@@ -46,9 +47,8 @@
              
             <ul>
                 
-                <li><a  href="home_authority.html" >Home</a></li>
-                <div class="separator"></div>
-                <li><a href="event.html" >Event</a></li>
+                <li><a  href="home_authority.html" >Devices</a></li>
+               
                 <div class="separator"></div>
                 <li><a style="color:#232f3e" href="setup.html" >Set Up</a></li>
               </ul>   
@@ -66,7 +66,7 @@
                      <!--inciication*/-->
         
         <div class="row ">
-                        <div class="col col-l">
+                        <div class="col col-m">
                            
         
         
@@ -74,8 +74,8 @@
         
           <div class="inci-container">  <!--inci-container  -->
           
-            <div class="head-s">
-                    
+            <div class="head-c">
+                    <label>Add users and device</label>
                     </div>
                     
          
@@ -83,25 +83,25 @@
                                     <form id="report" method="" action="">
                                         <table class="table ">
                                             <thead>
-                                                <tr class="text-primary">
-                                                    <th><label>Device ID</label></th>
-                                                    <th><input type="text" value=""></th> 
+                                                <tr class="text-primary"> 
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="">
-                                                    <th><label>Defendant ID</label></th>
-                                                    <th><input type="text" value=""></th> 
+                                             <tr class="">
+                                                    <td><label>Device ID</label></td>
+                                                    <td><input type="text" value=""></td> 
                                                 </tr>
                                                 <tr class="">
-                                                    <th><label>Complainant ID</label></th>
-                                                    <th><input type="text" value=""></th>  
+                                                    <td><label>Defendant ID</label></td>
+                                                    <td><input type="text" value=""></td> 
+                                                </tr>
+                                                <tr class="">
+                                                    <td><label>Complainant ID</label></td>
+                                                    <td><input type="text" value=""></td>  
                                                 </tr>
                                                 
                                                 <tr class="">
-                                                    <td colspan="2"><input id="setup" type="submit" value="Set Up"></td>
-                                                    
-                                                    
+                                                    <td colspan="2"><input id="setup" type="submit" value="Set Up" class="table_button"></td>
                                                 </tr>
                                                 
                                             </tbody>
