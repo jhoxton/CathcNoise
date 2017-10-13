@@ -59,16 +59,6 @@ dynamodb.scan(getAllEvents, function(err, data) { // SCAN FUNCTION GETS ALL ITEM
             addEvent.S3link = data.Items[i].S3link.S;
 
 
-
-            // console.log("=================================")
-            // console.log("LOOPEVENT Event = ", loopEvent.EventID);
-            // console.log("LOOPEVENT Time = ", loopEvent.Timestamp);
-            // console.log("LOOPEVENT Source = ", loopEvent.SourceType);
-            // console.log("LOOPEVENT db = ", loopEvent.dB_level);
-            // console.log("LOOPEVENT S3 =", loopEvent.S3link);
-            // console.log("=================================")
-
-
             //TESTING BLOCK FOR EVENT IN LOOP ITEMS
             // console.log("ADDEVENT Event = ", addEvent.EventID);
             // console.log("ADDEVENT Time = ", addEvent.Timestamp);
