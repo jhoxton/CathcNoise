@@ -59,6 +59,16 @@ dynamodb.scan(getAllEvents, function(err, data) { // SCAN FUNCTION GETS ALL ITEM
             addEvent.S3link = data.Items[i].S3link.S;
 
 
+
+            // console.log("=================================")
+            // console.log("LOOPEVENT Event = ", loopEvent.EventID);
+            // console.log("LOOPEVENT Time = ", loopEvent.Timestamp);
+            // console.log("LOOPEVENT Source = ", loopEvent.SourceType);
+            // console.log("LOOPEVENT db = ", loopEvent.dB_level);
+            // console.log("LOOPEVENT S3 =", loopEvent.S3link);
+            // console.log("=================================")
+
+
             //TESTING BLOCK FOR EVENT IN LOOP ITEMS
             // console.log("ADDEVENT Event = ", addEvent.EventID);
             // console.log("ADDEVENT Time = ", addEvent.Timestamp);
@@ -82,7 +92,31 @@ dynamodb.scan(getAllEvents, function(err, data) { // SCAN FUNCTION GETS ALL ITEM
 
         }
 
-        for (var i = 0; i < eventList.length; i++) { //Loops eventList array and prints to table
+        
+
+    }
+   sortList(eventList);
+
+
+});
+
+function sortList(eventList) { //Orders list in eventId order MAKE ONE FOR TIMESTAMP SORTING
+
+    eventList.sort(function(a,b){
+        var idA = a.EventID.toLowerCase(), idB= b.EventID.toLowerCase()
+        if (idA < idB)
+            return -1
+        if (idA > idB)
+            return 1
+        return 0
+    })
+
+     populateList(eventList);
+
+}
+
+function populateList(eventList) {
+    for (var i = 0; i < eventList.length; i++) { //Loops eventList array and prints to table
 
 
         //     // MAKE SOMETHING THAT CREATES A NEW "TABLE SPACE/ROW" PER LOOP
@@ -109,7 +143,7 @@ dynamodb.scan(getAllEvents, function(err, data) { // SCAN FUNCTION GETS ALL ITEM
             document.getElementById("dbPrint").appendChild(dbDiv);
             document.getElementById("audioPrint").appendChild(audDiv);
 
-
+            console.log("Array is passed motherfucker!")
             //TESTING LOOP
             // console.log("=================================")
             // console.log("Passed eventList EventID in main JS page = ", eventList[i].EventID);
@@ -122,8 +156,4 @@ dynamodb.scan(getAllEvents, function(err, data) { // SCAN FUNCTION GETS ALL ITEM
 
 
         };
-
-    }
-
-
-});
+}
