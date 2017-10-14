@@ -143,7 +143,7 @@ function populateList(eventList) {
             document.getElementById("dbPrint").appendChild(dbDiv);
             document.getElementById("audioPrint").appendChild(audDiv);
 
-            console.log("Array is passed motherfucker!")
+
             //TESTING LOOP
             // console.log("=================================")
             // console.log("Passed eventList EventID in main JS page = ", eventList[i].EventID);
