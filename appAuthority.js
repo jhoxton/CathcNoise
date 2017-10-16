@@ -14,9 +14,9 @@ var dialog = require('dialog');
     //user pool data
     var poolData = {
         // Your user pool id here
-        UserPoolId : 'ap-southeast-2_VvUYI3VWo', 
+        UserPoolId : 'ap-southeast-2_zXfWR7ApK', 
         // Your client id here
-        ClientId : '7si2ih6j701c244dn12imvnjs1' 
+        ClientId : '21927bd3v8muusjpt2r5i0sj42' 
     };
 
 
@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname + '/css'))); //allows html file to re
 
 //to get login page
 app.get('/', function(req, res) { //on html request of root directory, run callback function
-    res.sendFile(path.join(__dirname, '/login.html')); //send html file named "helloworld.html"
+    res.sendFile(path.join(__dirname, '/loginAuthority.html')); //send html file named "helloworld.html"
 	//res.render('/login.html');
 });
 
@@ -52,7 +52,7 @@ app.post('/login', function(req, res){
      var aUsername = req.body.username;
     var aPassword = req.body.password;
 
-    console.log("User Name: " + aUsername + " Password: "+ aPassword);
+    //console.log("User Name: " + aUsername + " Password: "+ aPassword);
 
     //login with username and password given
     Login(aUsername, aPassword, res);
@@ -62,7 +62,7 @@ app.post('/login', function(req, res){
 
 //get register page
 app.get('/register', function(req, res){
-	res.sendFile(path.join(__dirname, 'register.html'));
+	res.sendFile(path.join(__dirname, 'RegisterAuthority.html'));
     
 });
 
@@ -72,13 +72,12 @@ app.post('/signup', function(req, res){
     var aName = req.body.name;
     var aFamilyName = req.body.familyName
     var aEmail = req.body.email;
-    var aAddress = req.body.Address1 + " " + req.body.Address2 + " " + req.body.city + " " + req.body.Postcode;
     var aPhone = req.body.phone;
     var aUserName = req.body.userName;
     var aPassword = req.body.password;
 
     //register function
-    register(aName, aFamilyName, aEmail, aAddress, aPhone, aUserName, aPassword, res);
+    register(aName, aFamilyName, aEmail, aPhone, aUserName, aPassword, res);
 });
 
 app.post('/confirm', function(req, res){
@@ -95,7 +94,7 @@ app.get('/logout', function(req, res){
 	res.sendFile(path.join(__dirname, 'login.html'));
 });
 
-function register(name, familyName, email, address, phone, username, password, res)
+function register(name, familyName, email, phone, username, password, res)
 {
    
     //used to store attributes for registered user
@@ -121,29 +120,26 @@ function register(name, familyName, email, address, phone, username, password, r
         Value : name
     };
 
-    var dataAddress = {
-        Name : 'address',
-        Value : address
-    };
 
     //attributes given in register form
     var attributeEmail = new CognitoUserAttribute(dataEmail);
     var attributePhoneNumber = new CognitoUserAttribute(dataPhoneNumber);
     var attribueFamilyName = new CognitoUserAttribute(dataFamilyName);
     var attributeName = new CognitoUserAttribute(dataName);
-    var attributeAddress = new CognitoUserAttribute(dataAddress);
+    
 
     //add attributes to attribute list
     attributeList.push(attributeEmail);
     attributeList.push(attributePhoneNumber);
     attributeList.push(attribueFamilyName);
     attributeList.push(attributeName);
-    attributeList.push(attributeAddress);
+   
 
     //add username, password and attributes to user pool
     userPool.signUp(username, password, attributeList, null, function(err, result){
         if (err) {
-			dialog.info('Could not sign in.  Try Again', 'Sign In', res.sendFile(path.join(__dirname, 'register.html')));
+			//dialog.info('Could not sign in.  Try Again', 'Sign In', res.sendFile(path.join(__dirname, 'registerAuthority.html')));
+			dialog.info('Could not sign in.  Try Again', 'Sign In', res.sendFile(path.join(__dirname, 'registerAuthority.html')));
            console.log(err);
            
         }
@@ -152,8 +148,7 @@ function register(name, familyName, email, address, phone, username, password, r
             //user added to user pool
             cognitoUser = result.user;
             console.log('user name is ' + cognitoUser.getUsername());
-            dialog.info('User Registered', 'Sign In', res.sendFile(path.join(__dirname, 'confirm.html')));
-			//res.sendFile(path.join(__dirname, 'confirm.html'));
+             dialog.info('User Registered', 'Sign In', res.sendFile(path.join(__dirname, 'confirm.html')));
        }
     });
 }
@@ -209,8 +204,6 @@ dialog.info('Login Successful', 'User Login', res.sendFile(path.join(__dirname, 
         }
     });
 }
- 
-
 app.listen(port);//listen for network traffic on port specified by port variable
 
 console.log("Now listening on port " + port); //write to the console which port is being used
