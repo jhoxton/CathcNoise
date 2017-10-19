@@ -8,11 +8,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
       
-       <script src="js/catchnoise.js"></script>
-       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+    <script src="libs/aws-sdk-2.125.0.js" type="text/javascript"></script>
+    <script src="js/config.js" type="text/javascript"></script>
+    <script src="js/dbConnect.js" type="text/javascript"></script>
+    <script src="js/catchnoise.js" type="text/javascript"></script>
+    <script src="js/homeUser.js" type="text/javascript"></script>
+
       </head>
       
-      <body >
+      <body onload="initUserPage()">
       <div class="wrapper"><!-- wrapper -->
         <div class="header">  <!-- header-->
          
@@ -27,19 +32,16 @@
               <ul class="icon-list">
                <li class="nav-item dropdown"><label class="user-name"> User Name</label> </li>
               <li class="nav-item dropdown"><a href="#user" ><img src="images/user1.png" class="img-cont"> </a> </li>
-              <li class="nav-item dropdown"> 
-              <div id="noti_Counter"> </div>
-              <div id="notif_icon">
-              <a href="#notification"><img src='images/notif_back.png' onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
-               </div>
+ 
+   
+
                <!--THE NOTIFICAIONS DROPDOWN BOX.-->
             <div id="notifications">
                 <h3>Notifications</h3>
-                <div style="height:250px;"></div>
-                <div class="seeAll"><a href="#incidents">See All</a></div>
+
             </div>
-            </li>
-              <li class="nav-item dropdown"><a href="#settings"><img src="images/settings2.png" class="img-cont"> </a> </li>
+
+              <!-- <li class="nav-item dropdown"><a href="#settings"><img src="images/settings2.png" class="img-cont"> </a> </li> -->
               <li class="nav-item dropdown"><a href="#logout" ><img src="images/logout.png" class="img-cont"> </a> </li>
               </ul>
               </div>
@@ -69,35 +71,29 @@
           </div>
           <!-- /sidebar--> 
           
-     <div class="main-container">    <!-- main-container--> 
-       
-       
-                  
-                    
-                     <!--inciication*/-->
-        
-        <div class="row ">
-                        <div class="col col-l">
-                           
-        
-        
-        <div class="incident-wrapper" >   <!-- incident-wrapper -->
-        
-          <div class="inci-container">  <!--inci-container  -->
-          
-            <div class="head-c">
-                    <label>From</label>
-                           <input type="date" value="date">
-                           <label>TO</label>
-                             <input type="date" value="date">
-                    </div>
-                    
-         
-              <div class="table-responsive">
+                 <div class="main-container">
+
+                <!-- main-container-->
+                <!--inciication*/-->
+                <div class="row ">
+                    <div class="col col-l">
+                        <div class="incident-wrapper">
+                            <!-- incident-wrapper -->
+                            <div class="inci-container">
+                                <!--inci-container  -->
+
+                                <div class="head-c">
+                                    <label>From</label>
+                                    <input type="date" value="date">
+                                    <label>TO</label>
+                                    <input type="date" value="date">
+                                </div>
+                                
+                                <div class="table-responsive">
                                     <form id="report" method="" action="">
-                                        <table class="table ">
+                                        <table class="table" id="tableID">
                                             <thead>
-                                                <tr class="text-primary">
+                                                <tr class="text-primary" >
                                                     <th>Event ID</th>
                                                     <th>Time Stamp</th>
                                                     <th>DB Level</th>
@@ -106,63 +102,63 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="">
+                                            
+                                              <tr class="" >
+
+                                                   <td id="idPrint"></td>
+                                                    <td id="timeStampPrint"></td>
+                                                    <td id="typePrint"></td>
+                                                    <td id="dbPrint"></td> 
+                                                    <td id="audioPrint"></td> 
+                                                </tr>
+
+                                              <!--   <tr class="">
                                                     <td>1</td>
                                                     <td>2</td>
                                                     <td>3</td>
-                                                    <td>4</td> 
-                                                    
+                                                    <td>4</td>
                                                     <td><a href="#" class="">Audio</a></td>
                                                 </tr>
                                                 <tr class="">
                                                     <td>1</td>
                                                     <td>2</td>
                                                     <td>3</td>
-                                                    <td>4</td> 
+                                                    <td>4</td>
                                                     <td><a href="#" class="">Audio</a></td>
                                                 </tr>
                                                 <tr class="">
                                                     <td>1</td>
                                                     <td>2</td>
                                                     <td>3</td>
-                                                    <td>4</td> 
+                                                    <td>4</td>
                                                     <td><a href="#" class="">Audio</a></td>
                                                 </tr>
                                                 <tr class="">
                                                     <td>1</td>
                                                     <td>2</td>
                                                     <td>3</td>
-                                                    <td>4</td> 
+                                                    <td>4</td>
                                                     <td><a href="#" class="">Audio</a></td>
-                                                </tr>
+                                                </tr> -->
                                                 <tr class="">
-                                                    <td>1</td>
-                                                    <td>2</td>
-                                                    <td>3</td>
-                                                    <td>4</td> 
-                                                    <td><a href="#" class="">Audio</a></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td colspan="5"  ><input id="report-request" type="submit" value=" Report" class="table_button"></td>
-                                                    
+                                                    <td colspan="5">
+                                                        <input id="report-request" type="submit" value=" Report" class="table_button">
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        </form>
-                                    </div>
-                               
-      
-          
-            
-          </div>  <!--/inci-container -->
-          
-        
-     </div>    <!-- /incident-wrapper -->
-      
-      </div></div>
-      
-      
-    </div>  <!-- /incident  -->
+                                        <table id="testTable">
+                                          <tr></tr>
+                                        </table>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--/inci-container -->
+                        </div>
+                        <!-- /incident-wrapper -->
+                    </div>
+                </div>
+            </div> <!-- /incident  -->
                     
                     
             </div>  <!-- main-container-->   

@@ -27,9 +27,9 @@ function addEvent() //This will be the function that takes data from the Dynamo 
 	
 	function updateNotif(newEvent) {//If true, display new notif
 		if (newEvent = true) {
-			document.getElementById("imgNotifId").src ="images/notifTest.png";
-		} else {
 			document.getElementById("imgNotifId").src ="images/notif.png";
+		} else {
+			document.getElementById("imgNotifId").src ="images/notif1.png";
 		}
 	}
 	

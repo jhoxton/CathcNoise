@@ -9,9 +9,14 @@
       <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
        <script src="js/catchnoise.js"></script>
        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script>
+       <script src="libs/aws-sdk-2.125.0.js"></script>
+     <script src="js/config.js"></script>
+     <script src="js/authDbConnect.js"></script>
+     <script src="js/catchnoise.js"></script>
+
       </head>
       
-      <body >
+      <body onload="" >
       <div class="wrapper"><!-- wrapper -->
         <div class="header">  <!-- header-->
          
@@ -26,10 +31,7 @@
               <ul class="icon-list">
                <li class="nav-item dropdown"><label class="user-name"> Authority Name</label> </li>
               <li class="nav-item dropdown"><a href="#user" ><img src="images/user1.png" class="img-cont"> </a> </li>
-              <li><a class="nav-link count-indicator" id="notif_icon"
-               href="#" data-toggle="dropdown"> <img src='images/notif_back.png' onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
-               </li>
-              <li class="nav-item dropdown"><a href="#settings"><img src="images/settings2.png" class="img-cont"> </a> </li>
+
               <li class="nav-item dropdown"><a href="#logout" ><img src="images/logout.png" class="img-cont"> </a> </li>
               </ul>
               </div>
@@ -92,6 +94,18 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                              
+                                              <tr class="" >
+
+                                                    <td id="devicePrint"></td>
+                                                    <td id="defendantPrint"></td>
+                                                    <td id="complainantPrint"></td>
+                                                    <td id="addressPrint"></td> 
+                                                    <td id="audioPrint"></td> 
+                                              
+                                                </tr>
+                                            </tbody>
+<!--                                             <tbody>
                                                 <tr class="">
                                                    
                                                     <td><a href="event.html" >2</a></td>
@@ -129,7 +143,7 @@
                                                     <td>1</td>
                                                 </tr>
                                                 
-                                            </tbody>
+                                            </tbody> -->
                                         </table>
                                         </form>
                                     </div>

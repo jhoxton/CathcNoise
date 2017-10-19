@@ -491,6 +491,9 @@ tr [colspan="2"] {
 }
 .about_cont{
 	margin:16px;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 20px;
 	background-color: #fffaf2;
 	color:#000;}
 .about_content{

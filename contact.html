@@ -22,16 +22,12 @@
                     <a href="#home"> <img src="images/logo.png" > </a>
                 </div>
                 <!--/logo-container-->
-                <div class="icon-container"> 
-              <ul class="icon-list">
-              <li class="nav-item dropdown"><a href="#logout" ><img src="images/user1.png" class="img-cont"> </a> </li>
-              <li><a class="nav-link count-indicator" id="notif_icon"
-               href="#" data-toggle="dropdown"> <img src='images/notif_back.png' onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
-               </li>
-              <li class="nav-item dropdown"><a href="#settings"><img src="images/settings2.png" class="img-cont"> </a> </li>
-              <li class="nav-item dropdown"><a href="#logout" ><img src="images/logout.png" class="img-cont"> </a> </li>
-              </ul>
-              </div>
+                <div class="icon-container">
+                    <ul class="icon-list">
+                        <li class="nav-item dropdown"><a href="#logout"><img src="images/user1.png" class="img-cont"> </a> </li>
+                        <li class="nav-item dropdown"><a href="#logout"><img src="images/logout.png" class="img-cont"> </a> </li>
+                    </ul>
+                </div>
             </div>
             <!-- /header-bar-->
         </div>
@@ -44,88 +40,85 @@
                 <div class="menu">
                     <!-- menu-->
                     <ul>
-                
-                <li><a href="home_user.html" >Events</a></li>
-                <div class="separator"></div>
-                
-                <li><a style="color:#232f3e" href="contact.html" >Contact us</a></li>
-                <div class="separator"></div>
-                <li><a href="aboutUs.html" >About us</a></li>
-              </ul>  
+                        <li><a href="home_user.html">Events</a></li>
+                        <div class="separator"></div>
+                        <li><a style="color:#232f3e" href="contact.html">Contact us</a></li>
+                        <div class="separator"></div>
+                        <li><a href="aboutUs.html">About us</a></li>
+                    </ul>
                 </div>
                 <!-- /menu-->
             </div>
             <!-- /sidebar-->
-            
-            <div class="main-container"><!-- main-container--> 
-       
-       
-                    
-                    
-                    <div class="row ">
-                        <div class="col col-s">
-                            <div class="card">
-                            
+            <div class="main-container">
+                <!-- main-container-->
+                <div class="row ">
+                    <div class="col col-m">
+                        <div class="card">
                             <div class="head-c">
-                    <label>Contact Us</label>      
+                                <label>Contact Us</label>
+                            </div>
+                            <div class="table-responsive">
+                                <!--table-responsive-->
+                                <form id="form" action="">
+                                    <table class="table ">
+                                        <tr>
+                                            <td>
+                                                <label>Type:</label>
+                                            </td>
+                                            </td>
+                                            <tr>
+                                                <td>
+                                                    <select name="contactType">
+                                                        <option value="feedback">FeedBack</option>
+                                                        <option value="device">Device Problem</option>
+                                                        <option value="complaint">Complaint</option>
+                                                        <option value="other">Other</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="subject">Subject</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <textarea rows="4" cols="50" placeholder="Message">
+                                                    </textarea>
+                                                </td>
+                                                </td>
+                                                <tr>
+                                                    <td>
+                                                        <input type="submit" value="Submit" class="table_button">
+                                                    </td>
+                                                </tr>
+                                    </table>
+                                </form>
+                            </div>
+                            <!--/table-responsive-->
+                        </div>
                     </div>
-                    <div class="table-responsive">   <!--table-responsive-->
-                    <form id ="form" action="">
-  <table class="table ">
-  
-    <tr><td>
-    <label>Type:</label>
-    </td></td>
-
-    <tr><td> 
-    <select name="contactType">
-    <option value="feedback">FeedBack</option>
-    <option value="device">Device Problem</option>
-    <option value="complaint">Complaint</option>
-    <option value="other">Other</option>
-    </select>
-    </td></tr>
-
-      <tr>
-      <td><label for="subject">Subject</label></td>
-      </tr>
-      
-     <tr>
-     <td> <textarea rows="4" cols="50" placeholder="Message">
-  </textarea></td>
-  </td>
-  
-      <tr>
-      <td><input type="submit" value="Submit" class="table_button"></td>
-      </tr>
-  </table>
-    </form>
-    </div>  <!--/table-responsive-->
-    </div></div></div>
-                   
-            </div>    <!-- /main-container-->      
-                    
-                </div>  <!-- /content-wrapper-->
-            
-            
-               
-      <div class="footer"> <!-- footer-->
-            
-            <div class="layout-content-box"> <!-- layout-content-box-->
-              
-              <div class="row1"> <!-- row-->
-                <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
-              </div>
-              <!-- /row--> 
-              
+                </div>
             </div>
-            <!-- /layout-content-box--> 
-            
-       </div>  <!-- /footer-->
-           
-          
-      </div> <!-- /wrapper -->
-      
-       
-      </body>
-      </html>
+            <!-- /main-container-->
+        </div>
+        <!-- /content-wrapper-->
+        <div class="footer">
+            <!-- footer-->
+            <div class="layout-content-box">
+                <!-- layout-content-box-->
+                <div class="row1">
+                    <!-- row-->
+                    <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
+                </div>
+                <!-- /row-->
+            </div>
+            <!-- /layout-content-box-->
+        </div>
+        <!-- /footer-->
+    </div>
+    <!-- /wrapper -->
+</body>
+
+</html>

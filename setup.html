@@ -1,154 +1,138 @@
-      <!doctype html>
-      <html>
-      <head>
-      <link rel="icon" type="icon" href="logo.icon" />
-      <meta charset="utf-8">
-      
-      <title>CatchNoise</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
-       <script src="js/catchnoise.js"></script>
-       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script>
-      </head>
-      
-      <body >
-      <div class="wrapper"><!-- wrapper -->
-        <div class="header">  <!-- header-->
-         
-          <div class="header-bar">   <!-- header-bar-->
-          
-            <div class="logo-container" style="float: left">  <!--logo-container--> 
-              <a href="#home"> <img src="images/logo.png" > </a> 
-            </div>   <!--/logo-container-->
-              
-                    
-              <div class="icon-container"> 
-              <ul class="icon-list">
-               <li class="nav-item dropdown"><label class="user-name"> Authority Name</label> </li>
-              <li class="nav-item dropdown"><a href="#user" ><img src="images/user1.png" class="img-cont"> </a> </li>
-              <li><a class="nav-link count-indicator" id="notif_icon"
-               href="#" data-toggle="dropdown"> <img src='images/notif_back.png' onmouseover="this.src='images/notif_front.png';" onmouseout= "this.src='images/notif_back.png';" class="img-cont"> </a>
-               </li>
-              <li class="nav-item dropdown"><a href="#settings"><img src="images/settings2.png" class="img-cont"> </a> </li>
-              <li class="nav-item dropdown"><a href="#logout"><img src="images/logout.png" class="img-cont"> </a> </li>
-              </ul>
-              </div>
-               </div> <!-- /header-bar-->
-           
-        </div > <!-- /header-->
-        
-        <div style="clear: both"></div>
-        
-          <div class="content-wrapper">    <!-- content-wrapper-->
-                    
-          <div class="sidebar"> <!-- sidebar-->
-            
-            <div class="menu"> <!-- menu-->
-             
-            <ul>
-                
-                <li><a  href="home_authority.html" >Devices</a></li>
-               
-                <div class="separator"></div>
-                <li><a style="color:#232f3e" href="setup.html" >Set Up</a></li>
-              </ul>   
+<!doctype html>
+<html>
+
+<head>
+    <link rel="icon" type="icon" href="logo.icon" />
+    <meta charset="utf-8">
+    <title>CatchNoise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
+    <script src="js/catchnoise.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- wrapper -->
+        <div class="header"
+            <!-- header-->
+            <div class="header-bar">
+                <!-- header-bar-->
+                <div class="logo-container" style="float: left">
+                    <!--logo-container-->
+                    <a href="#home"> <img src="images/logo.png" > </a>
+                </div>
+                <!--/logo-container-->
+                <div class="icon-container">
+                    <ul class="icon-list">
+                        <li class="nav-item dropdown">
+                            <label class="user-name"> Authority Name</label>
+                        </li>
+                        <li class="nav-item dropdown"><a href="#user"><img src="images/user1.png" class="img-cont"> </a> </li>
+                        
+                        
+                        <li class="nav-item dropdown"><a href="#logout"><img src="images/logout.png" class="img-cont"> </a> </li>
+                    </ul>
+                </div>
             </div>
-            <!-- /menu--> 
-            
-          </div>
-          <!-- /sidebar--> 
-          
-     <div class="main-container">    <!-- main-container--> 
-       
-       
-                  
-                    
-                     <!--inciication*/-->
-        
-        <div class="row ">
-                        <div class="col col-m">
-                           
-        
-        
-     <div class="incident-wrapper-setup" >  <!-- incident-wrapper -->
-        
-          <div class="inci-container">  <!--inci-container  -->
-          
-            <div class="head-c">
-                    <label>Add users and device</label>
-                    </div>
-                    
-         
-              <div class="table-responsive">
+            <!-- /header-bar-->
+        </div>
+        <!-- /header-->
+        <div style="clear: both"></div>
+        <div class="content-wrapper">
+            <!-- content-wrapper-->
+            <div class="sidebar">
+                <!-- sidebar-->
+                <div class="menu">
+                    <!-- menu-->
+                    <ul>
+                        <li><a href="home_authority.html">Devices</a></li>
+                        <div class="separator"></div>
+                        <li><a style="color:#232f3e" href="setup.html">Set Up</a></li>
+                    </ul>
+                </div>
+                <!-- /menu-->
+            </div>
+            <!-- /sidebar-->
+            <div class="main-container">
+                <!-- main-container-->
+                <!--inciication*/-->
+                <div class="row ">
+                    <div class="col col-m">
+                        <div class="incident-wrapper-setup">
+                            <!-- incident-wrapper -->
+                            <div class="inci-container">
+                                <!--inci-container  -->
+                                <div class="head-c">
+                                    <label>Add users and device</label>
+                                </div>
+                                <div class="table-responsive">
                                     <form id="report" method="" action="">
                                         <table class="table ">
                                             <thead>
-                                                <tr class="text-primary"> 
+                                                <tr class="text-primary">
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                             <tr class="">
-                                                    <td><label>Device ID</label></td>
-                                                    <td><input type="text" value=""></td> 
+                                                <tr class="">
+                                                    <td>
+                                                        <label>Device ID</label>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" value="">
+                                                    </td>
                                                 </tr>
                                                 <tr class="">
-                                                    <td><label>Defendant ID</label></td>
-                                                    <td><input type="text" value=""></td> 
+                                                    <td>
+                                                        <label>Defendant ID</label>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" value="">
+                                                    </td>
                                                 </tr>
                                                 <tr class="">
-                                                    <td><label>Complainant ID</label></td>
-                                                    <td><input type="text" value=""></td>  
+                                                    <td>
+                                                        <label>Complainant ID</label>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" value="">
+                                                    </td>
                                                 </tr>
-                                                
                                                 <tr class="">
-                                                    <td colspan="2"><input id="setup" type="submit" value="Set Up" class="table_button"></td>
+                                                    <td colspan="2">
+                                                        <input id="setup" type="submit" value="Set Up" class="table_button">
+                                                    </td>
                                                 </tr>
-                                                
                                             </tbody>
                                         </table>
-                                        </form>
-                                    </div>
-                               
-      
-          
-            
-          </div>  <!--/inci-container -->
-          
-        
-    </div>    <!-- /incident-wrapper -->
-      
-      </div></div>
-      
-      
-    </div>  <!-- /incident  -->
-                    
-                    
-            </div>  <!-- main-container-->   
-                
-           
-      
-
-
-
-        
-        <div class="footer"> <!-- footer-->
-          
-          <div class="layout-content-box"> <!-- layout-content-box-->
-            
-            <div class="row1"> <!-- row-->
-              <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--/inci-container -->
+                        </div>
+                        <!-- /incident-wrapper -->
+                    </div>
+                </div>
             </div>
-            <!-- /row--> 
-            
-          </div>
-          <!-- /layout-content-box--> 
-          
+            <!-- /incident  -->
         </div>
-        <!-- /footer--> 
-        
-      </div>
-      <!-- /wrapper -->
-       
-      </body>
-      </html>
+        <!-- main-container-->
+        <div class="footer">
+            <!-- footer-->
+            <div class="layout-content-box">
+                <!-- layout-content-box-->
+                <div class="row1">
+                    <!-- row-->
+                    <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
+                </div>
+                <!-- /row-->
+            </div>
+            <!-- /layout-content-box-->
+        </div>
+        <!-- /footer-->
+    </div>
+    <!-- /wrapper -->
+</body>
 
+</html>
