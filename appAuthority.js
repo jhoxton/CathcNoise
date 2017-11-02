@@ -68,7 +68,7 @@ app.get('/register', function(req, res){
 
 //get confirm page
 app.post('/signup', function(req, res){
-    //res.sendFile(path.join(__dirname, 'confirm.html'));
+
     var aName = req.body.name;
     var aFamilyName = req.body.familyName
     var aEmail = req.body.email;
@@ -81,7 +81,7 @@ app.post('/signup', function(req, res){
 });
 
 app.post('/confirm', function(req, res){
-    //res.sendFile(path.join(__dirname, 'login.html'));
+
 
     var aVerify = req.body.verify;
     console.log("Verify code" + aVerify);
@@ -138,7 +138,7 @@ function register(name, familyName, email, phone, username, password, res)
     //add username, password and attributes to user pool
     userPool.signUp(username, password, attributeList, null, function(err, result){
         if (err) {
-			//dialog.info('Could not sign in.  Try Again', 'Sign In', res.sendFile(path.join(__dirname, 'registerAuthority.html')));
+
 			dialog.info('Could not sign in.  Try Again', 'Sign In', res.sendFile(path.join(__dirname, 'registerAuthority.html')));
            console.log(err);
            

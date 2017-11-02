@@ -1,157 +1,121 @@
-      <!doctype html>
-      <html>
-      <head>
-      <link rel="icon" type="icon" href="logo.icon" />
-      <meta charset="utf-8">
-      
-      <title>CatchNoise</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
+<!doctype html>
+<html>
 
+<head>
+    <link rel="icon" type="icon" href="logo.icon" />
+    <meta charset="utf-8">
+    <title>CatchNoise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="libs/aws-sdk-2.125.0.js"></script>
-
     <script src="js/config.js" type="text/javascript"></script>
     <script src="js/authDbConnect.js" type="text/javascript"></script>
     <script src="js/dbConnect.js" type="text/javascript"></script>
     <script src="js/catchnoise.js" type="text/javascript"></script>
     <script src="js/event.js" type="text/javascript"></script>
+</head>
 
-      </head>
-      
-      <body onload="initEventPage()">
-      <div class="wrapper"><!-- wrapper -->
-        <div class="header">  <!-- header-->
-         
-          <div class="header-bar">   <!-- header-bar-->
-          
-            <div class="logo-container" style="float: left">  <!--logo-container--> 
-              <a href="#home"> <img src="images/logo.png" > </a> 
-            </div>   <!--/logo-container-->
-              
-                    
-              <div class="icon-container"> 
-              <ul class="icon-list">
-               <li class="nav-item dropdown"><label class="user-name"> Authority Name</label> </li>
-              <li class="nav-item dropdown"><a href="#user" ><img src="images/user1.png" class="img-cont"> </a> </li>
-
-              <li class="nav-item dropdown"><a href="#logout" ><img src="images/logout.png" class="img-cont"> </a> </li>
-              </ul>
-              </div>
-               </div> <!-- /header-bar-->
-           
-        </div > <!-- /header-->
-        
-        <div style="clear: both"></div>
-        
-          <div class="content-wrapper">    <!-- content-wrapper-->
-                    
-          <div class="sidebar"> <!-- sidebar-->
-            
-            <div class="menu"> <!-- menu-->
-             
-            <ul>
-                
-                <li><a  href="home_authority.html" >Devices</a></li>
-                
-                <div class="separator"></div>
-                <li><a href="setup.html" >Set Up</a></li>
-              </ul>   
+<body onload="initEventPage()">
+    <div class="wrapper">
+        <!-- wrapper -->
+        <div class="header">
+            <!-- header-->
+            <div class="header-bar">
+                <!-- header-bar-->
+                <div class="logo-container" style="float: left">
+                    <!--logo-container-->
+                    <a href="#home"> <img src="images/logo.png" > </a>
+                </div>
+                <!--/logo-container-->
+                <div class="icon-container">
+                    <ul class="icon-list">
+                        <li class="nav-item dropdown">
+                            <label class="user-name"> Authority Name</label>
+                        </li>
+                        <li class="nav-item dropdown"><a href="#user"><img src="images/user1.png" class="img-cont"> </a> </li>
+                        <li class="nav-item dropdown"><a href="#logout"><img src="images/logout.png" class="img-cont"> </a> </li>
+                    </ul>
+                </div>
             </div>
-            <!-- /menu--> 
-            
-          </div>
-          <!-- /sidebar--> 
-          
-     <div class="main-container">    <!-- main-container--> 
-       
-       
-                  
-                    
-                     <!--inciication*/-->
-        
-        <div class="row ">
-                        <div class="col col-l">
-                           
-        
-        
-        <div class="incident-wrapper" >   <!-- incident-wrapper -->
-        
-          <div class="inci-container">  <!--inci-container  -->
-          
-            <div class="head-c"> 
-                    <label>Device ID </label>
-                    </div>
-                    
-                                <div class="table-responsive" >
-                                    
-                                        <table class="table" id="tableID">
-                                            <thead>
-                                                <tr class="text-primary" >
-                                                    <th>Event ID </th>
-                                                    <th>Time Stamp</th>
-                                                    <th>DB Level</th>
-                                                    <th>Type</th>
-                                                    <th>Download</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            
-                                              <tr id="tabRow" > 
-                                                   <td id="idPrint"></td>
-                                                    <td id="timeStampPrint"></td>
-                                                    <td id="typePrint"></td>
-                                                    <td id="dbPrint"></td> 
-                                                    <td id="audioPrint"></td> 
-                                                </tr>
-
-                                             
-                                            </tbody>
-                                        </table>
-                                    
-                                    
-                                </div>
-                               
-      
-          
-            
-          </div>  <!--/inci-container -->
-          
-        
-     </div>    <!-- /incident-wrapper -->
-      
-      </div></div>
-      
-      
-    </div>  <!-- /incident  -->
-                    
-                    
-            </div>  <!-- main-container-->   
-                
-           
-      
-
-
-
-        
-        <div class="footer"> <!-- footer-->
-          
-          <div class="layout-content-box"> <!-- layout-content-box-->
-            
-            <div class="row1"> <!-- row-->
-              <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
-            </div>
-            <!-- /row--> 
-            
-          </div>
-          <!-- /layout-content-box--> 
-          
+            <!-- /header-bar-->
         </div>
-        <!-- /footer--> 
-        
-      </div>
-      <!-- /wrapper -->
-       
-      </body>
-      </html>
+        <!-- /header-->
+        <div style="clear: both"></div>
+        <div class="content-wrapper">
+            <!-- content-wrapper-->
+            <div class="sidebar">
+                <!-- sidebar-->
+                <div class="menu">
+                    <!-- menu-->
+                    <ul>
+                        <li><a href="home_authority.html">Devices</a></li>
+                        <div class="separator"></div>
+                        <li><a href="setup.html">Set Up</a></li>
+                    </ul>
+                </div>
+                <!-- /menu-->
+            </div>
+            <!-- /sidebar-->
+            <div class="main-container">
+                <!-- main-container-->
+                <!--inciication*/-->
+                <div class="row ">
+                    <div class="col col-l">
+                        <div class="incident-wrapper">
+                            <!-- incident-wrapper -->
+                            <div class="inci-container">
+                                <!--inci-container  -->
+                                <div class="head-c">
+                                    <label>Device ID </label>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table" id="tableID">
+                                        <thead>
+                                            <tr class="text-primary">
+                                                <th>Event ID </th>
+                                                <th>Time Stamp</th>
+                                                <th>DB Level</th>
+                                                <th>Type</th>
+                                                <th>Download</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr id="tabRow">
+                                                <td id="idPrint"></td>
+                                                <td id="timeStampPrint"></td>
+                                                <td id="typePrint"></td>
+                                                <td id="dbPrint"></td>
+                                                <td id="audioPrint"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--/inci-container -->
+                        </div>
+                        <!-- /incident-wrapper -->
+                    </div>
+                </div>
+            </div>
+            <!-- /incident  -->
+        </div>
+        <!-- main-container-->
+        <div class="footer">
+            <!-- footer-->
+            <div class="layout-content-box">
+                <!-- layout-content-box-->
+                <div class="row1">
+                    <!-- row-->
+                    <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
+                </div>
+                <!-- /row-->
+            </div>
+            <!-- /layout-content-box-->
+        </div>
+        <!-- /footer-->
+    </div>
+    <!-- /wrapper -->
+</body>
 
+</html>

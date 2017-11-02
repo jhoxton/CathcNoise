@@ -1,87 +1,75 @@
-      <!doctype html>
-      <html>
-      <head>
-      <link rel="icon" type="icon" href="logo.icon" />
-      <meta charset="utf-8">
-      
-      <title>CatchNoise</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
-       <script src="js/catchnoise.js"></script>
-       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script>
-       <script src="libs/aws-sdk-2.125.0.js"></script>
-     <script src="js/config.js"></script>
-     <script src="js/authDbConnect.js"></script>
-     <script src="js/catchnoise.js"></script>
+<!doctype html>
+<html>
 
-      </head>
-      
-      <body onload="" >
-      <div class="wrapper"><!-- wrapper -->
-        <div class="header">  <!-- header-->
-         
-          <div class="header-bar">   <!-- header-bar-->
-          
-            <div class="logo-container" style="float: left">  <!--logo-container--> 
-              <a href="#home"> <img src="images/logo.png" > </a> 
-            </div>   <!--/logo-container-->
-              
-                    
-              <div class="icon-container"> 
-              <ul class="icon-list">
-               <li class="nav-item dropdown"><label class="user-name"> Authority Name</label> </li>
-              <li class="nav-item dropdown"><a href="#user" ><img src="images/user1.png" class="img-cont"> </a> </li>
+<head>
+    <link rel="icon" type="icon" href="logo.icon" />
+    <meta charset="utf-8">
+    <title>CatchNoise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/catchnoise.css">
+    <script src="js/catchnoise.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+    </script>
+    <script src="libs/aws-sdk-2.125.0.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/authDbConnect.js"></script>
+    <script src="js/catchnoise.js"></script>
+</head>
 
-              <li class="nav-item dropdown"><a href="#logout" ><img src="images/logout.png" class="img-cont"> </a> </li>
-              </ul>
-              </div>
-               </div> <!-- /header-bar-->
-           
-        </div > <!-- /header-->
-        
-        <div style="clear: both"></div>
-        
-          <div class="content-wrapper">    <!-- content-wrapper-->
-                    
-          <div class="sidebar"> <!-- sidebar-->
-            
-            <div class="menu"> <!-- menu-->
-             
-            <ul>
-                
-                <li><a style="color:#232f3e" href="home_authority.html" >Devices</a></li>
-                <div class="separator"></div>
-             
-                <li><a href="setup.html" >Set Up</a></li>
-              </ul>   
+<body onload="">
+    <div class="wrapper">
+        <!-- wrapper -->
+        <div class="header">
+            <!-- header-->
+            <div class="header-bar">
+                <!-- header-bar-->
+                <div class="logo-container" style="float: left">
+                    <!--logo-container-->
+                    <a href="#home"> <img src="images/logo.png" > </a>
+                </div>
+                <!--/logo-container-->
+                <div class="icon-container">
+                    <ul class="icon-list">
+                        <li class="nav-item dropdown">
+                            <label class="user-name"> Authority Name</label>
+                        </li>
+                        <li class="nav-item dropdown"><a href="#user"><img src="images/user1.png" class="img-cont"> </a> </li>
+                        <li class="nav-item dropdown"><a href="#logout"><img src="images/logout.png" class="img-cont"> </a> </li>
+                    </ul>
+                </div>
             </div>
-            <!-- /menu--> 
-            
-          </div>
-          <!-- /sidebar--> 
-          
-     <div class="main-container">    <!-- main-container--> 
-       
-       
-                  
-                    
-                     <!--inciication*/-->
-        
-        <div class="row ">
-                        <div class="col col-l">
-                           
-        
-        
-        <div class="incident-wrapper" >   <!-- incident-wrapper -->
-        
-          <div class="inci-container">  <!--inci-container  -->
-          
-            <div class="head-c">
-                    <label>All Devices</label>
-                    </div>
-                    
-         
-              <div class="table-responsive">
+            <!-- /header-bar-->
+        </div>
+        <!-- /header-->
+        <div style="clear: both"></div>
+        <div class="content-wrapper">
+            <!-- content-wrapper-->
+            <div class="sidebar">
+                <!-- sidebar-->
+                <div class="menu">
+                    <!-- menu-->
+                    <ul>
+                        <li><a style="color:#232f3e" href="home_authority.html">Devices</a></li>
+                        <div class="separator"></div>
+                        <li><a href="setup.html">Set Up</a></li>
+                    </ul>
+                </div>
+                <!-- /menu-->
+            </div>
+            <!-- /sidebar-->
+            <div class="main-container">
+                <!-- main-container-->
+                <!--inciication*/-->
+                <div class="row ">
+                    <div class="col col-l">
+                        <div class="incident-wrapper">
+                            <!-- incident-wrapper -->
+                            <div class="inci-container">
+                                <!--inci-container  -->
+                                <div class="head-c">
+                                    <label>All Devices</label>
+                                </div>
+                                <div class="table-responsive">
                                     <form id="report" method="" action="">
                                         <table class="table ">
                                             <thead>
@@ -90,104 +78,45 @@
                                                     <th>Defendant Name</th>
                                                     <th>Complainant Name</th>
                                                     <th>Complainant Address</th>
-                                                    
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                              
-                                              <tr class="" >
-
+                                                <tr class="">
                                                     <td id="devicePrint"></td>
                                                     <td id="defendantPrint"></td>
                                                     <td id="complainantPrint"></td>
-                                                    <td id="addressPrint"></td> 
-                                                    <td id="audioPrint"></td> 
-                                              
+                                                    <td id="addressPrint"></td>
+                                                    <td id="audioPrint"></td>
                                                 </tr>
                                             </tbody>
-<!--                                             <tbody>
-                                                <tr class="">
-                                                   
-                                                    <td><a href="event.html" >2</a></td>
-                                                    <td>3</td>
-                                                    <td>4</td> 
-                                                     <td>1</td>
-                                                    
-                                                </tr>
-                                                <tr class="">
-                                                   
-                                                    <td><a href="event.html" >2</a></td>
-                                                    <td>3</td>
-                                                    <td>4</td> 
-                                                     <td>1</td>
-                                                </tr>
-                                                <tr class="">
-                                                   
-                                                    <td><a href="event.html" >2</a></td>
-                                                    <td>3</td>
-                                                    <td>4</td> 
-                                                     <td>1</td>
-                                                </tr>
-                                                <tr class="">
-                                                    
-                                                    <td><a href="event.html" >2</a></td>
-                                                    <td>3</td>
-                                                    <td>4</td>
-                                                    <td>1</td>
-                                                </tr>
-                                                <tr class="">
-                                                    
-                                                    <td><a href="event.html" >2</a></td>
-                                                    <td>3</td>
-                                                    <td>4</td> 
-                                                    <td>1</td>
-                                                </tr>
-                                                
-                                            </tbody> -->
                                         </table>
-                                        </form>
-                                    </div>
-                               
-      
-          
-            
-          </div>  <!--/inci-container -->
-          
-        
-     </div>    <!-- /incident-wrapper -->
-      
-      </div></div>
-      
-      
-    </div>  <!-- /incident  -->
-                    
-                    
-            </div>  <!-- main-container-->   
-                
-           
-      
-
-
-
-        
-        <div class="footer"> <!-- footer-->
-          
-          <div class="layout-content-box"> <!-- layout-content-box-->
-            
-            <div class="row1"> <!-- row-->
-              <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--/inci-container -->
+                        </div>
+                        <!-- /incident-wrapper -->
+                    </div>
+                </div>
             </div>
-            <!-- /row--> 
-            
-          </div>
-          <!-- /layout-content-box--> 
-          
+            <!-- /incident  -->
         </div>
-        <!-- /footer--> 
-        
-      </div>
-      <!-- /wrapper -->
-       
-      </body>
-      </html>
+        <!-- main-container-->
+        <div class="footer">
+            <!-- footer-->
+            <div class="layout-content-box">
+                <!-- layout-content-box-->
+                <div class="row1">
+                    <!-- row-->
+                    <p> © 2017, Amazon Web Services, Inc. or its affiliates. All rights reserved. </p>
+                </div>
+                <!-- /row-->
+            </div>
+            <!-- /layout-content-box-->
+        </div>
+        <!-- /footer-->
+    </div>
+    <!-- /wrapper -->
+</body>
 
+</html>

@@ -35,7 +35,7 @@ var eventList = [];
 
 
 function getEvents(callback) {
-    console.log("Getting All Events from the Database");
+    // console.log("Getting All Events from the Database");
 
     var searchParams = {
         TableName: 'Events',
@@ -54,7 +54,7 @@ function getEvents(callback) {
         if (err) {
             console.log(err, err.stack);
         } else {
-            console.log("Printing Out Dat!");
+            // console.log("Printing Out Data");
             console.log(data);
             callback(data);
         }
@@ -65,8 +65,9 @@ function getEvents(callback) {
 
 function sortList(eventList) { //Orders list in eventId order MAKE ONE FOR TIMESTAMP SORTING
 
-    eventList.sort(function(a,b){
-        var idA = a.EventID.toLowerCase(), idB= b.EventID.toLowerCase()
+    eventList.sort(function(a, b) {
+        var idA = a.EventID.toLowerCase(),
+            idB = b.EventID.toLowerCase()
         if (idA < idB)
             return -1
         if (idA > idB)
@@ -74,7 +75,7 @@ function sortList(eventList) { //Orders list in eventId order MAKE ONE FOR TIMES
         return 0
     })
 
-     populateList(eventList);
+    populateList(eventList);
 
 }
 
@@ -82,14 +83,14 @@ function sortList(eventList) { //Orders list in eventId order MAKE ONE FOR TIMES
 
 function getEventsByDeviceID(deviceID, callback) { // For Events Page
 
-    console.log("Getting All Events from the Database");
+    // console.log("Getting All Events from the Database");
 
     var searchParams = {
         ExpressionAttributeValues: {
             ":a": {
                 S: deviceID
             }
-        }, 
+        },
         FilterExpression: "DeviceID = :a",
         TableName: "Events"
     };
@@ -98,7 +99,7 @@ function getEventsByDeviceID(deviceID, callback) { // For Events Page
         if (err) {
             console.log(err, err.stack);
         } else {
-            console.log("Printing Out Dat!");
+            // console.log("Printing Out Data");
             console.log(data);
 
             callback(data);

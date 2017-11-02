@@ -41,13 +41,13 @@ app.use(express.static(path.join(__dirname + '/css'))); //allows html file to re
 //to get login page
 app.get('/', function(req, res) { //on html request of root directory, run callback function
     res.sendFile(path.join(__dirname, '/login.html')); //send html file named "helloworld.html"
-	//res.render('/login.html');
+
 });
 
 
 //access welcome page after login
 app.post('/login', function(req, res){
-    //res.sendFile(path.join(__dirname, 'welcome.html'));
+
 
      var aUsername = req.body.username;
     var aPassword = req.body.password;
@@ -68,7 +68,7 @@ app.get('/register', function(req, res){
 
 //get confirm page
 app.post('/signup', function(req, res){
-    //res.sendFile(path.join(__dirname, 'confirm.html'));
+
     var aName = req.body.name;
     var aFamilyName = req.body.familyName
     var aEmail = req.body.email;
@@ -82,7 +82,7 @@ app.post('/signup', function(req, res){
 });
 
 app.post('/confirm', function(req, res){
-    //res.sendFile(path.join(__dirname, 'login.html'));
+
 
     var aVerify = req.body.verify;
     console.log("Verify code" + aVerify);
@@ -153,7 +153,7 @@ function register(name, familyName, email, address, phone, username, password, r
             cognitoUser = result.user;
             console.log('user name is ' + cognitoUser.getUsername());
             dialog.info('User Registered', 'Sign In', res.sendFile(path.join(__dirname, 'confirm.html')));
-			//res.sendFile(path.join(__dirname, 'confirm.html'));
+
        }
     });
 }
@@ -166,7 +166,7 @@ function ConfirmUser(code, res){
     {
 		dialog.info('Could not Verify User.  Try Again', 'Verify User', res.sendFile(path.join(__dirname, 'confirm.html')));
         console.log(err);
-        //res.sendFile(path.join(__dirname, 'confirm.html'));
+
     }
     else{
         dialog.info('User Verified', 'Verify User', res.sendFile(path.join(__dirname, 'login.html')));
@@ -193,7 +193,7 @@ function Login(userName, password, res){
         onSuccess: function (result) {
             console.log('access token + ' + result.getAccessToken().getJwtToken());
 dialog.info('Login Successful', 'User Login', res.sendFile(path.join(__dirname, 'home_user.html')));
-            //res.sendFile(path.join(__dirname, 'index.html'));
+
         },
  
         onFailure: function(err) {

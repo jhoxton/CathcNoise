@@ -28,18 +28,12 @@ dynamodb.scan(getAllEvents, function(err, data) { // SCAN FUNCTION GETS ALL ITEM
 
 
             var addDevice = {
-                DeviceID : "",
+                DeviceID: "",
                 Address: "",
                 ComplainantID: "",
                 DefendantID: ""
             };
 
-
-            // TESTING BLOCK FOR DIRECT DB ITEMS
-            // console.log("ITEMS ID = ", data.Items[i].DeviceID.S);
-            // console.log("ITEMS COMP ID = ", data.Items[i].Address.S);
-            // console.log("ITEM DEF ID =", data.Items[i].ComplainantID.S);
-            // console.log("ITEM DEF ID =", data.Items[i].DefendantID.S);
 
             addDevice.DeviceID = data.Items[i].DeviceID.S; //Adds the parameters to a the loopEvent
             addDevice.Address = data.Items[i].Address.S;
@@ -51,18 +45,19 @@ dynamodb.scan(getAllEvents, function(err, data) { // SCAN FUNCTION GETS ALL ITEM
 
         }
 
-        
+
 
     }
 
- sortDeviceList(deviceList);
+    sortDeviceList(deviceList);
 
 });
 
 function sortDeviceList(deviceList) { //Orders list in eventId order MAKE ONE FOR TIMESTAMP SORTING
 
-    deviceList.sort(function(a,b){
-        var idA = a.DeviceID.toLowerCase(), idB= b.DeviceID.toLowerCase()
+    deviceList.sort(function(a, b) {
+        var idA = a.DeviceID.toLowerCase(),
+            idB = b.DeviceID.toLowerCase()
         if (idA < idB)
             return -1
         if (idA > idB)
@@ -70,45 +65,40 @@ function sortDeviceList(deviceList) { //Orders list in eventId order MAKE ONE FO
         return 0
     })
 
-     populateDeviceList(deviceList);
+    populateDeviceList(deviceList);
 
 }
 var linkID;
+
 function populateDeviceList(deviceList) {
 
     for (var i = 0; i < deviceList.length; i++) { //Loops eventList array and prints to table
 
-            // linkID = deviceList[i].DeviceID;
-            // console.log(linkID);
+        // linkID = deviceList[i].DeviceID;
+        // console.log(linkID);
 
-            var idDiv = document.createElement("div");
-            var defDiv = document.createElement("div");
-            var compDiv = document.createElement("div");
-            var addDiv = document.createElement("div");
-          
-            
-            a = document.createElement('a'); 
-            a.innerHTML = deviceList[i].DeviceID;
-            idDiv.appendChild(a);
+        var idDiv = document.createElement("div");
+        var defDiv = document.createElement("div");
+        var compDiv = document.createElement("div");
+        var addDiv = document.createElement("div");
 
 
-            defDiv.innerHTML = deviceList[i].DefendantID;
-            compDiv.innerHTML = deviceList[i].ComplainantID;
-            addDiv.innerHTML = deviceList[i].Address;
-            // a.href =  "event.html+?";
-            a.href =  `event.html?DeviceID=${deviceList[i].DeviceID}`;
-
-            document.getElementById("devicePrint").appendChild(idDiv);
-            document.getElementById("defendantPrint").appendChild(defDiv);
-            document.getElementById("complainantPrint").appendChild(compDiv);
-            document.getElementById("addressPrint").appendChild(addDiv);
+        a = document.createElement('a');
+        a.innerHTML = deviceList[i].DeviceID;
+        idDiv.appendChild(a);
 
 
-        };
+        defDiv.innerHTML = deviceList[i].DefendantID;
+        compDiv.innerHTML = deviceList[i].ComplainantID;
+        addDiv.innerHTML = deviceList[i].Address;
+
+        a.href = `event.html?DeviceID=${deviceList[i].DeviceID}`;
+
+        document.getElementById("devicePrint").appendChild(idDiv);
+        document.getElementById("defendantPrint").appendChild(defDiv);
+        document.getElementById("complainantPrint").appendChild(compDiv);
+        document.getElementById("addressPrint").appendChild(addDiv);
+
+
+    };
 }
-
-function tryLink() { //Transfer deviceID object over FIX WHAT EVER IS CASUING THAT ERROR FIRST
-    console.log("Here is where I'd put my DeviceID. IF I HAD ONE!");
-}
-
-  

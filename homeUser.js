@@ -1,20 +1,14 @@
-function initEventPage() {
+function initUserPage() {
+    console.log("Loading User Page");
 
-    console.log("Loading Event Page");
 
-    // getEvents(function (eventData) {
-    //  console.log("Inside Event INIT");
-    //  console.log(eventData);
-    //  extractEventsFromData(eventData);
-    // });
-    var urlParams = new URLSearchParams(window.location.search); //?anything=123
-    var deviceID = urlParams.get("DeviceID");
+    var deviceID = "V003" //THIS IS THE AWS COGNITO ID
+
 
     getEventsByDeviceID(deviceID, function(eventData) {
 
         extractEventsFromData(eventData);
     });
-
 }
 
 function extractEventsFromData(eventData) {
@@ -37,7 +31,6 @@ function extractEventsFromData(eventData) {
         addEvent.dB_level = eventData.Items[i].dB_level.N;
         addEvent.S3link = eventData.Items[i].S3link.S;
 
-
         eventList.push(addEvent); //Add to an array list of events
 
 
@@ -51,7 +44,7 @@ function buildEventListItems(eventList) {
 
 
         //     // MAKE SOMETHING THAT CREATES A NEW "TABLE SPACE/ROW" PER LOOP
-
+        // console.log(eventList[i])
         var test = document.createElement("div");
         var idDiv = document.createElement("div");
         var timeDiv = document.createElement("div");
@@ -75,9 +68,6 @@ function buildEventListItems(eventList) {
         document.getElementById("typePrint").appendChild(sourceDiv);
         document.getElementById("dbPrint").appendChild(dbDiv);
         document.getElementById("audioPrint").appendChild(audDiv);
-
-
-
 
     };
 }
